@@ -1,0 +1,7 @@
+
+Local Interface    Parent Interface    Chassis Id          Port info          System Name
+et-0/0/1           -                   38:4f:49:5d:98:a0   et-0/0/2           poc-qfx5110-174     
+et-0/0/2           -                   38:4f:49:5d:9d:a0   et-0/0/2           poc-qfx5110-175     
+et-0/0/3           -                   38:4f:49:5d:ca:a0   et-0/0/2           poc-qfx5110-188     
+et-0/0/4           -                   38:4f:49:5d:cf:a0   et-0/0/2           poc-qfx5110-189     
+et-0/0/0           -                   38:4f:49:5d:d4:a0   et-0/0/2           poc-qfx5110-172     
