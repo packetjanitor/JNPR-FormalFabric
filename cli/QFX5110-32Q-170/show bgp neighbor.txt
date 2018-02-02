@@ -1,2 +1,115 @@
 
-BGP is not running
+Peer: 100.0.0.4+179 AS 65172   Local: 100.0.0.5+55171 AS 65170
+  Description: to-leaf-1
+  Group: underlay              Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Established    Flags: <Sync>
+  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Last Error: None
+  Options: <Preference PeerAS LocalAS Refresh>
+  Holdtime: 90 Preference: 170 Local AS: 65170 Local System AS: 65534
+  Number of flaps: 0
+  Peer ID: 100.0.0.172     Local ID: 100.0.0.170       Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 0    SNMP index: 15    
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: et-0/0/0.0                       
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Peer does not support Restarter functionality
+  Restart flag received from the peer: Notification
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer does not support LLGR Restarter functionality
+  Peer supports 4 byte AS extension (peer-as 65172)
+  Peer does not support Addpath
+  Table inet.0 Bit: 20000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              0
+    Received prefixes:            0
+    Accepted prefixes:            0
+    Suppressed due to damping:    0
+    Advertised prefixes:          0
+  Last traffic (seconds): Received 431373 Sent 7  Checked 431373
+  Input messages:  Total 2	Updates 1 	Refreshes 0 	Octets 42
+  Output messages: Total 2	Updates 0 	Refreshes 0 	Octets 42
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+
+Peer: 100.0.0.14+58645 AS 65174 Local: 100.0.0.15+179 AS 65170
+  Description: to-leaf-2
+  Group: underlay              Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Established    Flags: <Sync>
+  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Last Error: None
+  Options: <Preference PeerAS LocalAS Refresh>
+  Holdtime: 90 Preference: 170 Local AS: 65170 Local System AS: 65534
+  Number of flaps: 0
+  Peer ID: 100.0.0.174     Local ID: 100.0.0.170       Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 1    SNMP index: 16    
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: et-0/0/1.0                       
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Peer does not support Restarter functionality
+  Restart flag received from the peer: Notification
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer does not support LLGR Restarter functionality
+  Peer supports 4 byte AS extension (peer-as 65174)
+  Peer does not support Addpath
+  Table inet.0 Bit: 20000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              0
+    Received prefixes:            0
+    Accepted prefixes:            0
+    Suppressed due to damping:    0
+    Advertised prefixes:          0
+  Last traffic (seconds): Received 431373 Sent 3  Checked 431373
+  Input messages:  Total 3	Updates 1 	Refreshes 0 	Octets 105
+  Output messages: Total 2	Updates 0 	Refreshes 0 	Octets 42
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+
+Peer: 100.0.0.24 AS 65175      Local: 100.0.0.25 AS 65170
+  Description: to-leaf-3
+  Group: underlay              Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Active         Flags: <>
+  Last State: Idle          Last Event: Start
+  Last Error: None
+  Options: <Preference PeerAS LocalAS Refresh>
+  Holdtime: 90 Preference: 170 Local AS: 65170 Local System AS: 65534
+  Number of flaps: 0
+
+Peer: 100.0.0.34 AS 65188      Local: 100.0.0.35 AS 65170
+  Description: to-leaf-4
+  Group: underlay              Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Active         Flags: <>
+  Last State: Idle          Last Event: Start
+  Last Error: None
+  Options: <Preference PeerAS LocalAS Refresh>
+  Holdtime: 90 Preference: 170 Local AS: 65170 Local System AS: 65534
+  Number of flaps: 0
+
+Peer: 100.0.0.44 AS 65189      Local: 100.0.0.45 AS 65170
+  Description: to-leaf-5
+  Group: underlay              Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Active         Flags: <>
+  Last State: Idle          Last Event: Start
+  Last Error: None
+  Options: <Preference PeerAS LocalAS Refresh>
+  Holdtime: 90 Preference: 170 Local AS: 65170 Local System AS: 65534
+  Number of flaps: 0

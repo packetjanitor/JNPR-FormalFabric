@@ -12,7 +12,7 @@
 
 
  - name: pass cli to junos devices
-   hosts: junos
+   hosts: junos-ssh
    roles:
     - Juniper.junos
    connection: local

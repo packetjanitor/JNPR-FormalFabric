@@ -52,7 +52,3 @@ tap                     up    up
 vme                     up    down
 vtep                    up    up
 vtep.32768              up    up  
-vtep.32769              up    up   eth-switch
-vtep.32770              up    up   eth-switch
-vtep.32771              up    up   eth-switch
-vtep.32772              up    up   eth-switch

@@ -21,7 +21,7 @@
        - set 
 
 - name: Collect configuration from devices
-  hosts: junos
+  hosts: junos-ssh
   connection: local
   gather_facts: no
   tasks:

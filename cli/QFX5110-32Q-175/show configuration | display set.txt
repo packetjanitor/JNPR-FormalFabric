@@ -82,12 +82,15 @@ set protocols bgp group overlay001 neighbor 100.0.0.172
 set protocols bgp group overlay001 neighbor 100.0.0.174
 set protocols bgp group overlay001 neighbor 100.0.0.188
 set protocols bgp group overlay001 neighbor 100.0.0.189
-set protocols ospf reference-bandwidth 1000g
-set protocols ospf area 0.0.0.0 interface et-0/0/0.0
-set protocols ospf area 0.0.0.0 interface et-0/0/1.0
-set protocols ospf area 0.0.0.0 interface et-0/0/2.0
-set protocols ospf area 0.0.0.0 interface xe-0/0/3:0.0 passive
-set protocols ospf area 0.0.0.0 interface lo0.0 passive
+set protocols bgp group underlay export underlay-networks
+set protocols bgp group underlay local-as 65175
+set protocols bgp group underlay multipath multiple-as
+set protocols bgp group underlay neighbor 100.0.0.23 description to-spine-1
+set protocols bgp group underlay neighbor 100.0.0.23 peer-as 65169
+set protocols bgp group underlay neighbor 100.0.0.25 description to-spine-2
+set protocols bgp group underlay neighbor 100.0.0.25 peer-as 65170
+set protocols bgp group underlay neighbor 100.0.0.27 description to-spine-3
+set protocols bgp group underlay neighbor 100.0.0.27 peer-as 65171
 set protocols evpn encapsulation vxlan
 set protocols evpn default-gateway no-gateway-community
 set protocols evpn extended-vni-list all
@@ -101,6 +104,8 @@ set policy-options policy-statement import-inet term 1 from community com100
 set policy-options policy-statement import-inet term 1 from community com200
 set policy-options policy-statement import-inet term 1 then accept
 set policy-options policy-statement load-balancing-policy then load-balance per-packet
+set policy-options policy-statement underlay-networks term 1 from protocol direct
+set policy-options policy-statement underlay-networks term 1 then accept
 set policy-options community com100 members target:1:100
 set policy-options community com200 members target:1:200
 set routing-instances vrf_vlan100 instance-type vrf

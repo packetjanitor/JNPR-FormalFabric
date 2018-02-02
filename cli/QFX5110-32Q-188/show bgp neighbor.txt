@@ -1,5 +1,134 @@
 
-Peer: 100.0.0.172+57425 AS 65534 Local: 100.0.0.188+179 AS 65534
+Peer: 100.0.0.33+179 AS 65169  Local: 100.0.0.32+64055 AS 65188
+  Description: to-spine-1
+  Group: underlay              Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Established    Flags: <Sync>
+  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Last Error: None
+  Export: [ underlay-networks ] 
+  Options: <Preference PeerAS Multipath LocalAS Refresh>
+  Options: <MultipathAs>
+  Holdtime: 90 Preference: 170 Local AS: 65188 Local System AS: 65534
+  Number of flaps: 0
+  Peer ID: 100.0.0.169     Local ID: 100.0.0.188       Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 0    SNMP index: 163   
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: et-0/0/0.0                       
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Peer does not support Restarter functionality
+  Restart flag received from the peer: Notification
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer does not support LLGR Restarter functionality
+  Peer supports 4 byte AS extension (peer-as 65169)
+  Peer does not support Addpath
+  Table inet.0 Bit: 20000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              14
+    Received prefixes:            28
+    Accepted prefixes:            28
+    Suppressed due to damping:    0
+    Advertised prefixes:          20
+  Last traffic (seconds): Received 1277196 Sent 26 Checked 1277196
+  Input messages:  Total 11	Updates 9	Refreshes 0 	Octets 587
+  Output messages: Total 8	Updates 5 	Refreshes 0 	Octets 413
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+
+Peer: 100.0.0.35+179 AS 65170  Local: 100.0.0.34+64595 AS 65188
+  Description: to-spine-2
+  Group: underlay              Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Established    Flags: <Sync>
+  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Last Error: None
+  Export: [ underlay-networks ] 
+  Options: <Preference PeerAS Multipath LocalAS Refresh>
+  Options: <MultipathAs>
+  Holdtime: 90 Preference: 170 Local AS: 65188 Local System AS: 65534
+  Number of flaps: 0
+  Peer ID: 100.0.0.170     Local ID: 100.0.0.188       Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 1    SNMP index: 164   
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: et-0/0/1.0                       
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Peer does not support Restarter functionality
+  Restart flag received from the peer: Notification
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer does not support LLGR Restarter functionality
+  Peer supports 4 byte AS extension (peer-as 65170)
+  Peer does not support Addpath
+  Table inet.0 Bit: 20000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              14
+    Received prefixes:            28
+    Accepted prefixes:            28
+    Suppressed due to damping:    0
+    Advertised prefixes:          24
+  Last traffic (seconds): Received 1277196 Sent 26 Checked 1277196
+  Input messages:  Total 11	Updates 9	Refreshes 0 	Octets 582
+  Output messages: Total 9	Updates 6 	Refreshes 0 	Octets 468
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+
+Peer: 100.0.0.37+59314 AS 65171 Local: 100.0.0.36+179 AS 65188
+  Description: to-spine-3
+  Group: underlay              Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Established    Flags: <Sync>
+  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Last Error: None
+  Export: [ underlay-networks ] 
+  Options: <Preference PeerAS Multipath LocalAS Refresh>
+  Options: <MultipathAs>
+  Holdtime: 90 Preference: 170 Local AS: 65188 Local System AS: 65534
+  Number of flaps: 0
+  Peer ID: 100.0.0.171     Local ID: 100.0.0.188       Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 2    SNMP index: 165   
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: et-0/0/2.0                       
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Peer does not support Restarter functionality
+  Restart flag received from the peer: Notification
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer does not support LLGR Restarter functionality
+  Peer supports 4 byte AS extension (peer-as 65171)
+  Peer does not support Addpath
+  Table inet.0 Bit: 20000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              14
+    Received prefixes:            28
+    Accepted prefixes:            28
+    Suppressed due to damping:    0
+    Advertised prefixes:          26
+  Last traffic (seconds): Received 1277196 Sent 26 Checked 1277196
+  Input messages:  Total 12	Updates 9	Refreshes 0 	Octets 645
+  Output messages: Total 12	Updates 9	Refreshes 0 	Octets 651
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+
+Peer: 100.0.0.172+179 AS 65534 Local: 100.0.0.188+60392 AS 65534
   Group: overlay001            Routing-Instance: master
   Forwarding routing-instance: master  
   Type: Internal    State: Established    Flags: <Sync>
@@ -8,9 +137,9 @@ Peer: 100.0.0.172+57425 AS 65534 Local: 100.0.0.188+179 AS 65534
   Options: <Preference LocalAddress AddressFamily Rib-group Refresh>
   Address families configured: evpn
   Local Address: 100.0.0.188 Holdtime: 90 Preference: 170
-  Number of flaps: 1
+  Number of flaps: 3
   Last flap event: HoldTime
-  Error: 'Hold Timer Expired Error' Sent: 1 Recv: 0
+  Error: 'Hold Timer Expired Error' Sent: 3 Recv: 0
   Peer ID: 100.0.0.172     Local ID: 100.0.0.188       Active Holdtime: 90
   Keepalive Interval: 30         Group index: 1    Peer index: 0    SNMP index: 159   
   I/O Session Thread: bgpio-0 State: Enabled
@@ -54,13 +183,13 @@ Peer: 100.0.0.172+57425 AS 65534 Local: 100.0.0.188+179 AS 65534
     Accepted prefixes:            0
     Suppressed due to damping:    0
     Advertised prefixes:          2
-  Last traffic (seconds): Received 1271933 Sent 9259 Checked 1271933
-  Input messages:  Total 401	Updates 59	Refreshes 0	Octets 13104
-  Output messages: Total 345	Updates 4	Refreshes 0	Octets 7295
+  Last traffic (seconds): Received 1277196 Sent 6 Checked 1277196
+  Input messages:  Total 6	Updates 5 	Refreshes 0 	Octets 893
+  Output messages: Total 6	Updates 4 	Refreshes 0 	Octets 854
   Output Queue[5]: 0            (default-switch.evpn.0, evpn)
   Output Queue[6]: 0            (__default_evpn__.evpn.0, evpn)
 
-Peer: 100.0.0.174+57192 AS 65534 Local: 100.0.0.188+179 AS 65534
+Peer: 100.0.0.174+179 AS 65534 Local: 100.0.0.188+49323 AS 65534
   Group: overlay001            Routing-Instance: master
   Forwarding routing-instance: master  
   Type: Internal    State: Established    Flags: <Sync>
@@ -69,9 +198,9 @@ Peer: 100.0.0.174+57192 AS 65534 Local: 100.0.0.188+179 AS 65534
   Options: <Preference LocalAddress AddressFamily Rib-group Refresh>
   Address families configured: evpn
   Local Address: 100.0.0.188 Holdtime: 90 Preference: 170
-  Number of flaps: 1
+  Number of flaps: 3
   Last flap event: HoldTime
-  Error: 'Hold Timer Expired Error' Sent: 1 Recv: 0
+  Error: 'Hold Timer Expired Error' Sent: 3 Recv: 0
   Peer ID: 100.0.0.174     Local ID: 100.0.0.188       Active Holdtime: 90
   Keepalive Interval: 30         Group index: 1    Peer index: 1    SNMP index: 160   
   I/O Session Thread: bgpio-0 State: Enabled
@@ -115,13 +244,13 @@ Peer: 100.0.0.174+57192 AS 65534 Local: 100.0.0.188+179 AS 65534
     Accepted prefixes:            0
     Suppressed due to damping:    0
     Advertised prefixes:          2
-  Last traffic (seconds): Received 1271933 Sent 9260 Checked 1271933
-  Input messages:  Total 347	Updates 5	Refreshes 0	Octets 7416
-  Output messages: Total 346	Updates 4	Refreshes 0	Octets 7314
+  Last traffic (seconds): Received 1277196 Sent 23 Checked 1277196
+  Input messages:  Total 6	Updates 5 	Refreshes 0 	Octets 893
+  Output messages: Total 6	Updates 4 	Refreshes 0 	Octets 854
   Output Queue[5]: 0            (default-switch.evpn.0, evpn)
   Output Queue[6]: 0            (__default_evpn__.evpn.0, evpn)
 
-Peer: 100.0.0.175+62842 AS 65534 Local: 100.0.0.188+179 AS 65534
+Peer: 100.0.0.175+179 AS 65534 Local: 100.0.0.188+50049 AS 65534
   Group: overlay001            Routing-Instance: master
   Forwarding routing-instance: master  
   Type: Internal    State: Established    Flags: <Sync>
@@ -130,9 +259,9 @@ Peer: 100.0.0.175+62842 AS 65534 Local: 100.0.0.188+179 AS 65534
   Options: <Preference LocalAddress AddressFamily Rib-group Refresh>
   Address families configured: evpn
   Local Address: 100.0.0.188 Holdtime: 90 Preference: 170
-  Number of flaps: 1
+  Number of flaps: 3
   Last flap event: HoldTime
-  Error: 'Hold Timer Expired Error' Sent: 1 Recv: 0
+  Error: 'Hold Timer Expired Error' Sent: 3 Recv: 0
   Peer ID: 100.0.0.175     Local ID: 100.0.0.188       Active Holdtime: 90
   Keepalive Interval: 30         Group index: 1    Peer index: 2    SNMP index: 161   
   I/O Session Thread: bgpio-0 State: Enabled
@@ -176,13 +305,13 @@ Peer: 100.0.0.175+62842 AS 65534 Local: 100.0.0.188+179 AS 65534
     Accepted prefixes:            0
     Suppressed due to damping:    0
     Advertised prefixes:          2
-  Last traffic (seconds): Received 1271933 Sent 9253 Checked 1271933
-  Input messages:  Total 346	Updates 5	Refreshes 0	Octets 7397
-  Output messages: Total 345	Updates 4	Refreshes 0	Octets 7295
+  Last traffic (seconds): Received 1277196 Sent 22 Checked 1277196
+  Input messages:  Total 6	Updates 5 	Refreshes 0 	Octets 893
+  Output messages: Total 6	Updates 4 	Refreshes 0 	Octets 854
   Output Queue[5]: 0            (default-switch.evpn.0, evpn)
   Output Queue[6]: 0            (__default_evpn__.evpn.0, evpn)
 
-Peer: 100.0.0.189+62087 AS 65534 Local: 100.0.0.188+179 AS 65534
+Peer: 100.0.0.189+179 AS 65534 Local: 100.0.0.188+63243 AS 65534
   Group: overlay001            Routing-Instance: master
   Forwarding routing-instance: master  
   Type: Internal    State: Established    Flags: <Sync>
@@ -191,9 +320,9 @@ Peer: 100.0.0.189+62087 AS 65534 Local: 100.0.0.188+179 AS 65534
   Options: <Preference LocalAddress AddressFamily Rib-group Refresh>
   Address families configured: evpn
   Local Address: 100.0.0.188 Holdtime: 90 Preference: 170
-  Number of flaps: 1
+  Number of flaps: 3
   Last flap event: HoldTime
-  Error: 'Hold Timer Expired Error' Sent: 1 Recv: 0
+  Error: 'Hold Timer Expired Error' Sent: 3 Recv: 0
   Peer ID: 100.0.0.189     Local ID: 100.0.0.188       Active Holdtime: 90
   Keepalive Interval: 30         Group index: 1    Peer index: 3    SNMP index: 162   
   I/O Session Thread: bgpio-0 State: Enabled
@@ -237,8 +366,8 @@ Peer: 100.0.0.189+62087 AS 65534 Local: 100.0.0.188+179 AS 65534
     Accepted prefixes:            0
     Suppressed due to damping:    0
     Advertised prefixes:          2
-  Last traffic (seconds): Received 1271933 Sent 9242 Checked 1271933
-  Input messages:  Total 370	Updates 29	Refreshes 0	Octets 9925
-  Output messages: Total 345	Updates 4	Refreshes 0	Octets 7295
+  Last traffic (seconds): Received 1277196 Sent 18 Checked 1277196
+  Input messages:  Total 9	Updates 8 	Refreshes 0 	Octets 1209
+  Output messages: Total 6	Updates 4 	Refreshes 0 	Octets 854
   Output Queue[5]: 0            (default-switch.evpn.0, evpn)
   Output Queue[6]: 0            (__default_evpn__.evpn.0, evpn)

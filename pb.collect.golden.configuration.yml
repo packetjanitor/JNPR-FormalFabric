@@ -11,9 +11,11 @@
      with_items: 
       - golden_configuration
       - golden_configuration/ospf_underlay_evpn_vxlan_overlay
+      - golden_configuration/isis_underlay_evpn_vxlan_overlay 
+      - golden_configuration/bgp_underlay_evpn_vxlan_overlay 
 
  - name: set and collect junos golden configuration
-   hosts: junos
+   hosts: junos-ssh
    connection: local
    gather_facts: no    
    tasks:
@@ -28,6 +30,6 @@
     - name: copy collected configuration in golden directory
       copy:
         content: "{{ result_text.ansible_facts.ansible_net_config }}"
-        dest: "{{ playbook_dir }}/golden_configuration/ospf_underlay_evpn_vxlan_overlay/{{ inventory_hostname }}.conf"
+        dest: "{{ playbook_dir }}/golden_configuration/{{ lab }}_underlay_evpn_vxlan_overlay/{{ inventory_hostname }}.conf"
 
 
