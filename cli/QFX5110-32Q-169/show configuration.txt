@@ -1,5 +1,5 @@
 
-## Last commit: 2018-02-02 17:02:19 EST by junivator
+## Last commit: 2018-02-05 22:55:48 EST by junivator
 version 17.4R1.16;
 groups {
     POC_Lab {
@@ -206,3 +206,27 @@ routing-options {
     }
 }
 protocols {
+    ospf {
+        reference-bandwidth 1000g;
+        area 0.0.0.0 {
+            interface et-0/0/0.0;
+            interface et-0/0/1.0;
+            interface et-0/0/2.0;
+            interface et-0/0/3.0;
+            interface et-0/0/4.0;
+            interface xe-0/0/5:0.0 {
+                passive;
+            }
+            interface lo0.0 {
+                passive;
+            }
+        }
+    }
+}
+policy-options {
+    policy-statement load-balancing-policy {
+        then {
+            load-balance per-packet;
+        }
+    }
+}

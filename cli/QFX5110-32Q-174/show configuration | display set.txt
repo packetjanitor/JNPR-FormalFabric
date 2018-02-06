@@ -34,6 +34,8 @@ set groups POC_Lab system ntp server 66.129.255.62 prefer
 set groups POC_Lab chassis fpc 0 pic 0 port 3 channel-speed 10g
 set groups POC_Lab interfaces em0 unit 0 family inet address 172.25.45.174/24
 set groups POC_Lab snmp community public
+set groups POC_Lab forwarding-options vxlan-routing next-hop 16384
+set groups POC_Lab forwarding-options vxlan-routing interface-num 8192
 set groups POC_Lab routing-options static route 0.0.0.0/0 next-hop 172.25.45.1
 set groups POC_Lab protocols lldp interface all
 set apply-groups POC_Lab
@@ -70,8 +72,6 @@ set interfaces irb unit 200 family inet address 10.20.20.1/16 virtual-gateway-ad
 set interfaces lo0 unit 0 family inet address 100.0.0.174/32 primary
 set interfaces lo0 unit 1 family inet address 10.2.3.74/32 primary
 set interfaces lo0 unit 2 family inet address 10.2.3.174/32 primary
-set forwarding-options vxlan-routing next-hop 16384
-set forwarding-options vxlan-routing interface-num 8192
 set routing-options router-id 100.0.0.174
 set routing-options autonomous-system 65534
 set routing-options forwarding-table export load-balancing-policy
@@ -82,15 +82,12 @@ set protocols bgp group overlay001 neighbor 100.0.0.172
 set protocols bgp group overlay001 neighbor 100.0.0.175
 set protocols bgp group overlay001 neighbor 100.0.0.188
 set protocols bgp group overlay001 neighbor 100.0.0.189
-set protocols bgp group underlay export underlay-networks
-set protocols bgp group underlay local-as 65174
-set protocols bgp group underlay multipath multiple-as
-set protocols bgp group underlay neighbor 100.0.0.13 description to-spine-1
-set protocols bgp group underlay neighbor 100.0.0.13 peer-as 65169
-set protocols bgp group underlay neighbor 100.0.0.15 description to-spine-2
-set protocols bgp group underlay neighbor 100.0.0.15 peer-as 65170
-set protocols bgp group underlay neighbor 100.0.0.17 description to-spine-3
-set protocols bgp group underlay neighbor 100.0.0.17 peer-as 65171
+set protocols ospf reference-bandwidth 1000g
+set protocols ospf area 0.0.0.0 interface et-0/0/0.0
+set protocols ospf area 0.0.0.0 interface et-0/0/1.0
+set protocols ospf area 0.0.0.0 interface et-0/0/2.0
+set protocols ospf area 0.0.0.0 interface xe-0/0/3:0.0 passive
+set protocols ospf area 0.0.0.0 interface lo0.0 passive
 set protocols evpn encapsulation vxlan
 set protocols evpn default-gateway no-gateway-community
 set protocols evpn extended-vni-list all
@@ -104,8 +101,6 @@ set policy-options policy-statement import-inet term 1 from community com100
 set policy-options policy-statement import-inet term 1 from community com200
 set policy-options policy-statement import-inet term 1 then accept
 set policy-options policy-statement load-balancing-policy then load-balance per-packet
-set policy-options policy-statement underlay-networks term 1 from protocol direct
-set policy-options policy-statement underlay-networks term 1 then accept
 set policy-options community com100 members target:1:100
 set policy-options community com200 members target:1:200
 set routing-instances vrf_vlan100 instance-type vrf

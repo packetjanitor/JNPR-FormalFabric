@@ -9,7 +9,7 @@
    - name: Check if all junos devices have established BGP connections to all UNDERLAY neigbors
      junos_command:
       display: 'xml' 
-      provider: "{{ credentials }}"
+#      provider: "{{ credentials }}"
       commands:
        - show bgp neighbor "{{ item.neighbor }}"
       wait_for:
@@ -23,7 +23,7 @@
    - name: Verify devices have learned routes in the UNDERLAY. 
      junos_command:
       display: 'xml'
-      provider: "{{ credentials }}"
+ #     provider: "{{ credentials }}"
       commands:
        - show route receive-protocol bgp "{{ item.neighbor }}" table inet.0"
       waitfor:

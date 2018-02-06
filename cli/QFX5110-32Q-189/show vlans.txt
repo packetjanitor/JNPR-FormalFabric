@@ -4,14 +4,14 @@ Routing instance        VLAN name             Tag          Interfaces
 default-switch          default               1        
                                                             
 default-switch          v100                  100      
-                                                           esi.1795*
+                                                           esi.1791*
                                                            vtep.32769*
                                                            vtep.32770*
                                                            vtep.32771*
                                                            vtep.32772*
                                                            xe-0/0/3:1.0*
 default-switch          v200                  200      
-                                                           esi.1794*
+                                                           esi.1790*
                                                            vtep.32769*
                                                            vtep.32770*
                                                            vtep.32771*

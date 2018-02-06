@@ -1,134 +1,5 @@
 
-Peer: 100.0.0.23+179 AS 65169  Local: 100.0.0.22+61410 AS 65175
-  Description: to-spine-1
-  Group: underlay              Routing-Instance: master
-  Forwarding routing-instance: master  
-  Type: External    State: Established    Flags: <Sync>
-  Last State: OpenConfirm   Last Event: RecvKeepAlive
-  Last Error: None
-  Export: [ underlay-networks ] 
-  Options: <Preference PeerAS Multipath LocalAS Refresh>
-  Options: <MultipathAs>
-  Holdtime: 90 Preference: 170 Local AS: 65175 Local System AS: 65534
-  Number of flaps: 0
-  Peer ID: 100.0.0.169     Local ID: 100.0.0.175       Active Holdtime: 90
-  Keepalive Interval: 30         Group index: 0    Peer index: 0    SNMP index: 163   
-  I/O Session Thread: bgpio-0 State: Enabled
-  BFD: disabled, down
-  Local Interface: et-0/0/0.0                       
-  NLRI for restart configured on peer: inet-unicast
-  NLRI advertised by peer: inet-unicast
-  NLRI for this session: inet-unicast
-  Peer supports Refresh capability (2)
-  Stale routes from peer are kept for: 300
-  Peer does not support Restarter functionality
-  Restart flag received from the peer: Notification
-  NLRI that restart is negotiated for: inet-unicast
-  NLRI of received end-of-rib markers: inet-unicast
-  NLRI of all end-of-rib markers sent: inet-unicast
-  Peer does not support LLGR Restarter functionality
-  Peer supports 4 byte AS extension (peer-as 65169)
-  Peer does not support Addpath
-  Table inet.0 Bit: 20000
-    RIB State: BGP restart is complete
-    Send state: in sync
-    Active prefixes:              14
-    Received prefixes:            28
-    Accepted prefixes:            28
-    Suppressed due to damping:    0
-    Advertised prefixes:          22
-  Last traffic (seconds): Received 1277436 Sent 27 Checked 1277436
-  Input messages:  Total 11	Updates 9	Refreshes 0 	Octets 587
-  Output messages: Total 8	Updates 6 	Refreshes 0 	Octets 423
-  Output Queue[1]: 0            (inet.0, inet-unicast)
-
-Peer: 100.0.0.25+56185 AS 65170 Local: 100.0.0.24+179 AS 65175
-  Description: to-spine-2
-  Group: underlay              Routing-Instance: master
-  Forwarding routing-instance: master  
-  Type: External    State: Established    Flags: <Sync>
-  Last State: OpenConfirm   Last Event: RecvKeepAlive
-  Last Error: None
-  Export: [ underlay-networks ] 
-  Options: <Preference PeerAS Multipath LocalAS Refresh>
-  Options: <MultipathAs>
-  Holdtime: 90 Preference: 170 Local AS: 65175 Local System AS: 65534
-  Number of flaps: 0
-  Peer ID: 100.0.0.170     Local ID: 100.0.0.175       Active Holdtime: 90
-  Keepalive Interval: 30         Group index: 0    Peer index: 2    SNMP index: 164   
-  I/O Session Thread: bgpio-0 State: Enabled
-  BFD: disabled, down
-  Local Interface: et-0/0/1.0                       
-  NLRI for restart configured on peer: inet-unicast
-  NLRI advertised by peer: inet-unicast
-  NLRI for this session: inet-unicast
-  Peer supports Refresh capability (2)
-  Stale routes from peer are kept for: 300
-  Peer does not support Restarter functionality
-  Restart flag received from the peer: Notification
-  NLRI that restart is negotiated for: inet-unicast
-  NLRI of received end-of-rib markers: inet-unicast
-  NLRI of all end-of-rib markers sent: inet-unicast
-  Peer does not support LLGR Restarter functionality
-  Peer supports 4 byte AS extension (peer-as 65170)
-  Peer does not support Addpath
-  Table inet.0 Bit: 20000
-    RIB State: BGP restart is complete
-    Send state: in sync
-    Active prefixes:              14
-    Received prefixes:            28
-    Accepted prefixes:            28
-    Suppressed due to damping:    0
-    Advertised prefixes:          26
-  Last traffic (seconds): Received 1277436 Sent 26 Checked 1277436
-  Input messages:  Total 12	Updates 9	Refreshes 0 	Octets 645
-  Output messages: Total 9	Updates 7 	Refreshes 0 	Octets 508
-  Output Queue[1]: 0            (inet.0, inet-unicast)
-
-Peer: 100.0.0.27+49238 AS 65171 Local: 100.0.0.26+179 AS 65175
-  Description: to-spine-3
-  Group: underlay              Routing-Instance: master
-  Forwarding routing-instance: master  
-  Type: External    State: Established    Flags: <Sync>
-  Last State: OpenConfirm   Last Event: RecvKeepAlive
-  Last Error: None
-  Export: [ underlay-networks ] 
-  Options: <Preference PeerAS Multipath LocalAS Refresh>
-  Options: <MultipathAs>
-  Holdtime: 90 Preference: 170 Local AS: 65175 Local System AS: 65534
-  Number of flaps: 0
-  Peer ID: 100.0.0.171     Local ID: 100.0.0.175       Active Holdtime: 90
-  Keepalive Interval: 30         Group index: 0    Peer index: 1    SNMP index: 165   
-  I/O Session Thread: bgpio-0 State: Enabled
-  BFD: disabled, down
-  Local Interface: et-0/0/2.0                       
-  NLRI for restart configured on peer: inet-unicast
-  NLRI advertised by peer: inet-unicast
-  NLRI for this session: inet-unicast
-  Peer supports Refresh capability (2)
-  Stale routes from peer are kept for: 300
-  Peer does not support Restarter functionality
-  Restart flag received from the peer: Notification
-  NLRI that restart is negotiated for: inet-unicast
-  NLRI of received end-of-rib markers: inet-unicast
-  NLRI of all end-of-rib markers sent: inet-unicast
-  Peer does not support LLGR Restarter functionality
-  Peer supports 4 byte AS extension (peer-as 65171)
-  Peer does not support Addpath
-  Table inet.0 Bit: 20000
-    RIB State: BGP restart is complete
-    Send state: in sync
-    Active prefixes:              14
-    Received prefixes:            28
-    Accepted prefixes:            28
-    Suppressed due to damping:    0
-    Advertised prefixes:          22
-  Last traffic (seconds): Received 1277436 Sent 26 Checked 1277436
-  Input messages:  Total 12	Updates 9	Refreshes 0 	Octets 650
-  Output messages: Total 7	Updates 5 	Refreshes 0 	Octets 380
-  Output Queue[1]: 0            (inet.0, inet-unicast)
-
-Peer: 100.0.0.172+54679 AS 65534 Local: 100.0.0.175+179 AS 65534
+Peer: 100.0.0.172+179 AS 65534 Local: 100.0.0.175+58000 AS 65534
   Group: overlay001            Routing-Instance: master
   Forwarding routing-instance: master  
   Type: Internal    State: Established    Flags: <Sync>
@@ -137,11 +8,11 @@ Peer: 100.0.0.172+54679 AS 65534 Local: 100.0.0.175+179 AS 65534
   Options: <Preference LocalAddress AddressFamily Rib-group Refresh>
   Address families configured: evpn
   Local Address: 100.0.0.175 Holdtime: 90 Preference: 170
-  Number of flaps: 3
+  Number of flaps: 1
   Last flap event: HoldTime
-  Error: 'Hold Timer Expired Error' Sent: 3 Recv: 0
+  Error: 'Hold Timer Expired Error' Sent: 1 Recv: 0
   Peer ID: 100.0.0.172     Local ID: 100.0.0.175       Active Holdtime: 90
-  Keepalive Interval: 30         Group index: 1    Peer index: 0    SNMP index: 159   
+  Keepalive Interval: 30         Group index: 0    Peer index: 0    SNMP index: 183   
   I/O Session Thread: bgpio-0 State: Enabled
   BFD: disabled, down
   NLRI for restart configured on peer: evpn
@@ -161,20 +32,20 @@ Peer: 100.0.0.172+54679 AS 65534 Local: 100.0.0.175+179 AS 65534
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: not advertising
-    Active prefixes:              16
-    Received prefixes:            16
-    Accepted prefixes:            16
+    Active prefixes:              12
+    Received prefixes:            12
+    Accepted prefixes:            12
     Suppressed due to damping:    0
-  Table default-switch.evpn.0 Bit: 60000
+  Table default-switch.evpn.0 Bit: 50000
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: in sync
-    Active prefixes:              16
-    Received prefixes:            16
-    Accepted prefixes:            16
+    Active prefixes:              12
+    Received prefixes:            12
+    Accepted prefixes:            12
     Suppressed due to damping:    0
-    Advertised prefixes:          14
-  Table __default_evpn__.evpn.0 Bit: 70000
+    Advertised prefixes:          10
+  Table __default_evpn__.evpn.0 Bit: 60000
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: in sync
@@ -183,13 +54,13 @@ Peer: 100.0.0.172+54679 AS 65534 Local: 100.0.0.175+179 AS 65534
     Accepted prefixes:            0
     Suppressed due to damping:    0
     Advertised prefixes:          2
-  Last traffic (seconds): Received 1277436 Sent 14 Checked 1277436
-  Input messages:  Total 7	Updates 5 	Refreshes 0 	Octets 956
-  Output messages: Total 6	Updates 4 	Refreshes 0 	Octets 893
-  Output Queue[5]: 0            (default-switch.evpn.0, evpn)
-  Output Queue[6]: 0            (__default_evpn__.evpn.0, evpn)
+  Last traffic (seconds): Received 1560578 Sent 2656 Checked 1560578
+  Input messages:  Total 103	Updates 5	Refreshes 0	Octets 2588
+  Output messages: Total 103	Updates 4	Refreshes 0	Octets 2588
+  Output Queue[4]: 0            (default-switch.evpn.0, evpn)
+  Output Queue[5]: 0            (__default_evpn__.evpn.0, evpn)
 
-Peer: 100.0.0.174+179 AS 65534 Local: 100.0.0.175+58561 AS 65534
+Peer: 100.0.0.174+179 AS 65534 Local: 100.0.0.175+57738 AS 65534
   Group: overlay001            Routing-Instance: master
   Forwarding routing-instance: master  
   Type: Internal    State: Established    Flags: <Sync>
@@ -198,11 +69,11 @@ Peer: 100.0.0.174+179 AS 65534 Local: 100.0.0.175+58561 AS 65534
   Options: <Preference LocalAddress AddressFamily Rib-group Refresh>
   Address families configured: evpn
   Local Address: 100.0.0.175 Holdtime: 90 Preference: 170
-  Number of flaps: 3
+  Number of flaps: 1
   Last flap event: HoldTime
-  Error: 'Hold Timer Expired Error' Sent: 3 Recv: 0
+  Error: 'Hold Timer Expired Error' Sent: 1 Recv: 0
   Peer ID: 100.0.0.174     Local ID: 100.0.0.175       Active Holdtime: 90
-  Keepalive Interval: 30         Group index: 1    Peer index: 1    SNMP index: 160   
+  Keepalive Interval: 30         Group index: 0    Peer index: 1    SNMP index: 184   
   I/O Session Thread: bgpio-0 State: Enabled
   BFD: disabled, down
   NLRI for restart configured on peer: evpn
@@ -222,20 +93,20 @@ Peer: 100.0.0.174+179 AS 65534 Local: 100.0.0.175+58561 AS 65534
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: not advertising
-    Active prefixes:              16
-    Received prefixes:            16
-    Accepted prefixes:            16
+    Active prefixes:              12
+    Received prefixes:            12
+    Accepted prefixes:            12
     Suppressed due to damping:    0
-  Table default-switch.evpn.0 Bit: 60000
+  Table default-switch.evpn.0 Bit: 50000
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: in sync
-    Active prefixes:              16
-    Received prefixes:            16
-    Accepted prefixes:            16
+    Active prefixes:              12
+    Received prefixes:            12
+    Accepted prefixes:            12
     Suppressed due to damping:    0
-    Advertised prefixes:          14
-  Table __default_evpn__.evpn.0 Bit: 70000
+    Advertised prefixes:          10
+  Table __default_evpn__.evpn.0 Bit: 60000
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: in sync
@@ -244,26 +115,25 @@ Peer: 100.0.0.174+179 AS 65534 Local: 100.0.0.175+58561 AS 65534
     Accepted prefixes:            0
     Suppressed due to damping:    0
     Advertised prefixes:          2
-  Last traffic (seconds): Received 1277436 Sent 22 Checked 1277436
-  Input messages:  Total 6	Updates 5 	Refreshes 0 	Octets 893
-  Output messages: Total 6	Updates 4 	Refreshes 0 	Octets 893
-  Output Queue[5]: 0            (default-switch.evpn.0, evpn)
-  Output Queue[6]: 0            (__default_evpn__.evpn.0, evpn)
+  Last traffic (seconds): Received 1560578 Sent 2661 Checked 1560578
+  Input messages:  Total 104	Updates 5	Refreshes 0	Octets 2607
+  Output messages: Total 103	Updates 4	Refreshes 0	Octets 2588
+  Output Queue[4]: 0            (default-switch.evpn.0, evpn)
+  Output Queue[5]: 0            (__default_evpn__.evpn.0, evpn)
 
-Peer: 100.0.0.188+50049 AS 65534 Local: 100.0.0.175+179 AS 65534
+Peer: 100.0.0.188+60556 AS 65534 Local: 100.0.0.175+179 AS 65534
   Group: overlay001            Routing-Instance: master
   Forwarding routing-instance: master  
   Type: Internal    State: Established    Flags: <Sync>
   Last State: OpenConfirm   Last Event: RecvKeepAlive
-  Last Error: Hold Timer Expired Error
+  Last Error: None
   Options: <Preference LocalAddress AddressFamily Rib-group Refresh>
   Address families configured: evpn
   Local Address: 100.0.0.175 Holdtime: 90 Preference: 170
-  Number of flaps: 3
-  Last flap event: HoldTime
-  Error: 'Hold Timer Expired Error' Sent: 3 Recv: 0
+  Number of flaps: 1
+  Last flap event: TransportError
   Peer ID: 100.0.0.188     Local ID: 100.0.0.175       Active Holdtime: 90
-  Keepalive Interval: 30         Group index: 1    Peer index: 2    SNMP index: 161   
+  Keepalive Interval: 30         Group index: 0    Peer index: 2    SNMP index: 185   
   I/O Session Thread: bgpio-0 State: Enabled
   BFD: disabled, down
   NLRI for restart configured on peer: evpn
@@ -283,20 +153,20 @@ Peer: 100.0.0.188+50049 AS 65534 Local: 100.0.0.175+179 AS 65534
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: not advertising
-    Active prefixes:              15
-    Received prefixes:            15
-    Accepted prefixes:            15
+    Active prefixes:              12
+    Received prefixes:            12
+    Accepted prefixes:            12
     Suppressed due to damping:    0
-  Table default-switch.evpn.0 Bit: 60000
+  Table default-switch.evpn.0 Bit: 50000
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: in sync
-    Active prefixes:              15
-    Received prefixes:            15
-    Accepted prefixes:            15
+    Active prefixes:              12
+    Received prefixes:            12
+    Accepted prefixes:            12
     Suppressed due to damping:    0
-    Advertised prefixes:          14
-  Table __default_evpn__.evpn.0 Bit: 70000
+    Advertised prefixes:          10
+  Table __default_evpn__.evpn.0 Bit: 60000
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: in sync
@@ -305,26 +175,26 @@ Peer: 100.0.0.188+50049 AS 65534 Local: 100.0.0.175+179 AS 65534
     Accepted prefixes:            0
     Suppressed due to damping:    0
     Advertised prefixes:          2
-  Last traffic (seconds): Received 1277436 Sent 23 Checked 1277436
-  Input messages:  Total 7	Updates 5 	Refreshes 0 	Octets 917
-  Output messages: Total 6	Updates 4 	Refreshes 0 	Octets 893
-  Output Queue[5]: 0            (default-switch.evpn.0, evpn)
-  Output Queue[6]: 0            (__default_evpn__.evpn.0, evpn)
+  Last traffic (seconds): Received 1560578 Sent 2646 Checked 1560578
+  Input messages:  Total 104	Updates 5	Refreshes 0	Octets 2651
+  Output messages: Total 102	Updates 4	Refreshes 0	Octets 2569
+  Output Queue[4]: 0            (default-switch.evpn.0, evpn)
+  Output Queue[5]: 0            (__default_evpn__.evpn.0, evpn)
 
-Peer: 100.0.0.189+179 AS 65534 Local: 100.0.0.175+62880 AS 65534
+Peer: 100.0.0.189+55516 AS 65534 Local: 100.0.0.175+179 AS 65534
   Group: overlay001            Routing-Instance: master
   Forwarding routing-instance: master  
   Type: Internal    State: Established    Flags: <Sync>
   Last State: OpenConfirm   Last Event: RecvKeepAlive
-  Last Error: Hold Timer Expired Error
+  Last Error: Cease
   Options: <Preference LocalAddress AddressFamily Rib-group Refresh>
   Address families configured: evpn
   Local Address: 100.0.0.175 Holdtime: 90 Preference: 170
-  Number of flaps: 3
-  Last flap event: HoldTime
-  Error: 'Hold Timer Expired Error' Sent: 3 Recv: 0
+  Number of flaps: 1
+  Last flap event: TransportError
+  Error: 'Cease' Sent: 1 Recv: 0
   Peer ID: 100.0.0.189     Local ID: 100.0.0.175       Active Holdtime: 90
-  Keepalive Interval: 30         Group index: 1    Peer index: 3    SNMP index: 162   
+  Keepalive Interval: 30         Group index: 0    Peer index: 3    SNMP index: 186   
   I/O Session Thread: bgpio-0 State: Enabled
   BFD: disabled, down
   NLRI for restart configured on peer: evpn
@@ -344,20 +214,20 @@ Peer: 100.0.0.189+179 AS 65534 Local: 100.0.0.175+62880 AS 65534
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: not advertising
-    Active prefixes:              16
-    Received prefixes:            16
-    Accepted prefixes:            16
+    Active prefixes:              12
+    Received prefixes:            12
+    Accepted prefixes:            12
     Suppressed due to damping:    0
-  Table default-switch.evpn.0 Bit: 60000
+  Table default-switch.evpn.0 Bit: 50000
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: in sync
-    Active prefixes:              16
-    Received prefixes:            16
-    Accepted prefixes:            16
+    Active prefixes:              12
+    Received prefixes:            12
+    Accepted prefixes:            12
     Suppressed due to damping:    0
-    Advertised prefixes:          14
-  Table __default_evpn__.evpn.0 Bit: 70000
+    Advertised prefixes:          10
+  Table __default_evpn__.evpn.0 Bit: 60000
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: in sync
@@ -366,8 +236,8 @@ Peer: 100.0.0.189+179 AS 65534 Local: 100.0.0.175+62880 AS 65534
     Accepted prefixes:            0
     Suppressed due to damping:    0
     Advertised prefixes:          2
-  Last traffic (seconds): Received 1277436 Sent 21 Checked 1277436
-  Input messages:  Total 9	Updates 8 	Refreshes 0 	Octets 1209
-  Output messages: Total 6	Updates 4 	Refreshes 0 	Octets 893
-  Output Queue[5]: 0            (default-switch.evpn.0, evpn)
-  Output Queue[6]: 0            (__default_evpn__.evpn.0, evpn)
+  Last traffic (seconds): Received 1560578 Sent 2645 Checked 1560578
+  Input messages:  Total 104	Updates 5	Refreshes 0	Octets 2651
+  Output messages: Total 102	Updates 4	Refreshes 0	Octets 2569
+  Output Queue[4]: 0            (default-switch.evpn.0, evpn)
+  Output Queue[5]: 0            (__default_evpn__.evpn.0, evpn)
