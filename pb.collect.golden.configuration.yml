@@ -10,6 +10,7 @@
        state: directory
      with_items: 
       - golden_configuration
+      - golden_configuration/base_underlay_evpn_vxlan_overlay
       - golden_configuration/ospf_underlay_evpn_vxlan_overlay
       - golden_configuration/isis_underlay_evpn_vxlan_overlay 
       - golden_configuration/bgp_underlay_evpn_vxlan_overlay 
@@ -24,7 +25,7 @@
       junos_facts:
        gather_subset: config
        config_format: text
-       provider: "{{ credentials }}"
+#       provider: "{{ credentials }}"
       register: result_text
 
     - name: copy collected configuration in golden directory

@@ -1,12 +1,10 @@
 ---
- - name: Check isis details.
+ - name: Check isis details for all devices.
    hosts: junos-ssh
    connection: local
    gather_facts: no
-   
    tasks:
-            
-   - name: Check if ISIS adjacencies are formed and up.
+   - name: Check if all ISIS adjacencies are formed and up.
      junos_command:
       display: 'xml'
       commands:
@@ -15,17 +13,14 @@
        - "result[0]['rpc-reply']['isis-adjacency-information']['isis-adjacency'][0]['adjacency-state'] eq 'Up'"
       retries: 3
       interval: 3
-      provider: "{{ credentials }}"
      with_items:
      - "{{ isis_system_id }}"
      when: isis_system_id is defined
      register: response
-
  #  - name: "Debug with items. 1st item"
  #    debug:
  #       var: response['results'][0]['output'][0]['rpc-reply']
-
-   - name: Check if junos devices have learned the upstream loopback addresses via ISIS
+   - name: Check if junos devices have learned all of the directly connected loopback addresses via ISIS
      junos_command:
       display: 'xml'
       commands:
@@ -34,21 +29,19 @@
        - "result[0]['rpc-reply']['route-information']['route-table']['rt']['rt-entry']['protocol-name'] eq IS-IS"
       retries: 3
       interval: 3
-      provider: "{{ credentials }}"
      with_items:
      - "{{ ospf_neighbors }}"
      when: ospf_neighbors is defined
 
-   - name: Check if junos devices have learned all of the EVPN/VXLAN endpoint addresses via ISIS
+   - name: Check if junos devices have learned all of the loopback addresses via ISIS
      junos_command:
       display: 'xml'
-      provider: "{{ credentials }}"
       commands:
-       - show route protocol isis table inet.0 terse "{{ item.neighbor }}"
+       - show route protocol isis table inet.0 terse "{{ item.peer_loopback }}"
       wait_for:
        - "result[0]['rpc-reply']['route-information']['route-table']['rt']['rt-entry']['protocol-name'] eq IS-IS"
       retries: 3
       interval: 3
      with_items:
-     - "{{ bgp_neighbors }}"
-     when: bgp_neighbors is defined
+     - "{{ neighbors }}"
+     when: item.peer_loopback is defined
