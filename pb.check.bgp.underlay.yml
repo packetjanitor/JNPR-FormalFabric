@@ -1,6 +1,6 @@
 ---
  - name: Check BGP details in the UNDERLAY.
-   hosts: junos-ssh 
+   hosts: junos-ssh
    connection: local
    gather_facts: no
    
@@ -33,3 +33,17 @@
      with_items:
      - "{{ peer_address }}"
      when: peer_address is defined
+
+   - name: Verify devices have learned the loopback routes in the UNDERLAY via the proper ASN and peer IP.
+     junos_command:
+      display: 'xml'
+ #     provider: "{{ credentials }}"
+      commands:
+       - show route receive-protocol bgp "{{ item.peer_ip }}" aspath-regex "{{ item.asn }}" table inet.0 "{{ item.peer_loopback }}" 
+      waitfor:
+       - "result[0]['rpc-reply']['route-information']['route-table']['rt']['rt-entry']['protocol-name'] eq BGP"
+      retries: 3
+      interval: 3
+     with_items:
+     - "{{ neighbors }}"
+     when: item.peer_loopback is defined

@@ -1,5 +1,5 @@
 --- 
- - name: Verify reachability by pinging directcly connected devices and the loopback address 
+ - name: Verify reachability by pinging directly connected devices and the loopback address 
    hosts: junos-ssh
    connection: local
    gather_facts: no
@@ -7,18 +7,29 @@
    - Juniper.junos
 
    tasks:
-   - name: Check if Junos devices can ping directly connected ip addresses
+   - name: Check if Junos devices can ping directly connected ip addresses via the source interface of the ip address
      junos_ping:
         host: "{{ inventory_hostname }}"
+        interface: "{{ item.interface }}"
         dest_ip: "{{ item.peer_ip }}"
         source_ip: "{{ item.local_ip }}"
         ttl: 1
      with_items:
       - "{{ neighbors }}"
 
-   - name: Check if Junos devices can ping adjacent loopback IP addresses
+   - name: Check if Junos devices can ping adjacent loopback IP addresses from their own loopback ip address.
      junos_ping:
         host: "{{ inventory_hostname }}"
+        dest_ip: "{{ item.peer_loopback }}"
+        source_ip: "{{ loopback }}"
+        ttl: 1
+     with_items:
+      - "{{ neighbors }}"
+
+   - name: Check if Junos devices can ping adjacent loopback IP addresses via the Source Interface of the IP Address 
+     junos_ping:
+        host: "{{ inventory_hostname }}"
+        interface: "{{ item.interface }}"
         dest_ip: "{{ item.peer_loopback }}"
         source_ip: "{{ item.local_ip }}"
         ttl: 1

@@ -54,9 +54,9 @@ Peer: 100.0.0.172+179 AS 65534 Local: 100.0.0.175+58000 AS 65534
     Accepted prefixes:            0
     Suppressed due to damping:    0
     Advertised prefixes:          2
-  Last traffic (seconds): Received 1560578 Sent 2656 Checked 1560578
-  Input messages:  Total 103	Updates 5	Refreshes 0	Octets 2588
-  Output messages: Total 103	Updates 4	Refreshes 0	Octets 2588
+  Last traffic (seconds): Received 1561343 Sent 3421 Checked 1561343
+  Input messages:  Total 131	Updates 5	Refreshes 0	Octets 3120
+  Output messages: Total 131	Updates 4	Refreshes 0	Octets 3120
   Output Queue[4]: 0            (default-switch.evpn.0, evpn)
   Output Queue[5]: 0            (__default_evpn__.evpn.0, evpn)
 
@@ -115,9 +115,9 @@ Peer: 100.0.0.174+179 AS 65534 Local: 100.0.0.175+57738 AS 65534
     Accepted prefixes:            0
     Suppressed due to damping:    0
     Advertised prefixes:          2
-  Last traffic (seconds): Received 1560578 Sent 2661 Checked 1560578
-  Input messages:  Total 104	Updates 5	Refreshes 0	Octets 2607
-  Output messages: Total 103	Updates 4	Refreshes 0	Octets 2588
+  Last traffic (seconds): Received 1561343 Sent 3426 Checked 1561343
+  Input messages:  Total 131	Updates 5	Refreshes 0	Octets 3120
+  Output messages: Total 130	Updates 4	Refreshes 0	Octets 3101
   Output Queue[4]: 0            (default-switch.evpn.0, evpn)
   Output Queue[5]: 0            (__default_evpn__.evpn.0, evpn)
 
@@ -175,9 +175,9 @@ Peer: 100.0.0.188+60556 AS 65534 Local: 100.0.0.175+179 AS 65534
     Accepted prefixes:            0
     Suppressed due to damping:    0
     Advertised prefixes:          2
-  Last traffic (seconds): Received 1560578 Sent 2646 Checked 1560578
-  Input messages:  Total 104	Updates 5	Refreshes 0	Octets 2651
-  Output messages: Total 102	Updates 4	Refreshes 0	Octets 2569
+  Last traffic (seconds): Received 1561343 Sent 3411 Checked 1561343
+  Input messages:  Total 132	Updates 5	Refreshes 0	Octets 3183
+  Output messages: Total 130	Updates 4	Refreshes 0	Octets 3101
   Output Queue[4]: 0            (default-switch.evpn.0, evpn)
   Output Queue[5]: 0            (__default_evpn__.evpn.0, evpn)
 
@@ -236,8 +236,8 @@ Peer: 100.0.0.189+55516 AS 65534 Local: 100.0.0.175+179 AS 65534
     Accepted prefixes:            0
     Suppressed due to damping:    0
     Advertised prefixes:          2
-  Last traffic (seconds): Received 1560578 Sent 2645 Checked 1560578
-  Input messages:  Total 104	Updates 5	Refreshes 0	Octets 2651
-  Output messages: Total 102	Updates 4	Refreshes 0	Octets 2569
+  Last traffic (seconds): Received 1561343 Sent 3410 Checked 1561343
+  Input messages:  Total 132	Updates 5	Refreshes 0	Octets 3183
+  Output messages: Total 130	Updates 4	Refreshes 0	Octets 3101
   Output Queue[4]: 0            (default-switch.evpn.0, evpn)
   Output Queue[5]: 0            (__default_evpn__.evpn.0, evpn)

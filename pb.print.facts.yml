@@ -1,6 +1,6 @@
 ---
  - name: Get Facts
-   hosts: junos
+   hosts: junos-ssh
    connection: local
    gather_facts: no
    tasks:
