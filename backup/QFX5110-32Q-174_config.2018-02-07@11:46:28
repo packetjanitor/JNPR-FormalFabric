@@ -54,12 +54,16 @@ set system syslog file messages authorization info
 set system syslog file interactive-commands interactive-commands any
 set interfaces et-0/0/0 unit 0 description to-spine-1
 set interfaces et-0/0/0 unit 0 family inet address 100.0.0.12/31
+set interfaces et-0/0/0 unit 0 family iso
 set interfaces et-0/0/1 unit 0 description to-spine-2
 set interfaces et-0/0/1 unit 0 family inet address 100.0.0.14/31
+set interfaces et-0/0/1 unit 0 family iso
 set interfaces et-0/0/2 unit 0 description to-spine-3
 set interfaces et-0/0/2 unit 0 family inet address 100.0.0.16/31
+set interfaces et-0/0/2 unit 0 family iso
 set interfaces xe-0/0/3:0 unit 0 description to-test-equipment
 set interfaces xe-0/0/3:0 unit 0 family inet address 100.174.1.1/16
+set interfaces xe-0/0/3:0 unit 0 family iso
 set interfaces xe-0/0/3:1 unit 0 description to-test-equipment
 set interfaces xe-0/0/3:1 unit 0 family ethernet-switching interface-mode trunk
 set interfaces xe-0/0/3:1 unit 0 family ethernet-switching vlan members v100
@@ -69,6 +73,7 @@ set interfaces xe-0/0/3:2 unit 0 family ethernet-switching vlan members v200
 set interfaces irb unit 100 family inet address 10.10.10.1/16 virtual-gateway-address 10.10.10.254
 set interfaces irb unit 200 family inet address 10.20.20.1/16 virtual-gateway-address 10.20.20.254
 set interfaces lo0 unit 0 family inet address 100.0.0.174/32 primary
+set interfaces lo0 unit 0 family iso address 49.0001.0001.0001.0174.00
 set interfaces lo0 unit 1 family inet address 10.2.3.74/32 primary
 set interfaces lo0 unit 2 family inet address 10.2.3.174/32 primary
 set routing-options router-id 100.0.0.174
@@ -81,15 +86,12 @@ set protocols bgp group overlay001 neighbor 100.0.0.172
 set protocols bgp group overlay001 neighbor 100.0.0.175
 set protocols bgp group overlay001 neighbor 100.0.0.188
 set protocols bgp group overlay001 neighbor 100.0.0.189
-set protocols bgp group underlay export underlay-networks
-set protocols bgp group underlay local-as 65174
-set protocols bgp group underlay multipath multiple-as
-set protocols bgp group underlay neighbor 100.0.0.13 description to-spine-1
-set protocols bgp group underlay neighbor 100.0.0.13 peer-as 65169
-set protocols bgp group underlay neighbor 100.0.0.15 description to-spine-2
-set protocols bgp group underlay neighbor 100.0.0.15 peer-as 65170
-set protocols bgp group underlay neighbor 100.0.0.17 description to-spine-3
-set protocols bgp group underlay neighbor 100.0.0.17 peer-as 65171
+set protocols isis reference-bandwidth 1000g
+set protocols isis interface et-0/0/0.0
+set protocols isis interface et-0/0/1.0
+set protocols isis interface et-0/0/2.0
+set protocols isis interface xe-0/0/3:0.0 passive
+set protocols isis interface lo0.0 passive
 set protocols evpn encapsulation vxlan
 set protocols evpn default-gateway no-gateway-community
 set protocols evpn extended-vni-list all
@@ -103,8 +105,6 @@ set policy-options policy-statement import-inet term 1 from community com100
 set policy-options policy-statement import-inet term 1 from community com200
 set policy-options policy-statement import-inet term 1 then accept
 set policy-options policy-statement load-balancing-policy then load-balance per-packet
-set policy-options policy-statement underlay-networks term 1 from protocol direct
-set policy-options policy-statement underlay-networks term 1 then accept
 set policy-options community com100 members target:1:100
 set policy-options community com200 members target:1:200
 set routing-instances vrf_vlan100 instance-type vrf
