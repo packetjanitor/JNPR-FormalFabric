@@ -1,12 +1,12 @@
 ---
- - name: check if interfaces state is up
+ - name: Check if the interface state is configured to be up, operational, and configured with the correct IP address.
    hosts: junos-ssh
    connection: local
    gather_facts: no
    
    tasks:
             
-   - name: check if interfaces admin status is up
+   - name: Check if interface is configured to be up.
      junos_command:
       display: 'xml'
       commands:
@@ -21,13 +21,27 @@
      when: item.interface is defined
 
 
-   - name: check if interfaces op status is up
+   - name: Check if interface status is operational.
      junos_command:
       display: 'xml'
       commands:
        - "show interfaces terse {{ item.interface }}"
       waitfor:
        - "result[0]['rpc-reply']['interface-information']['physical-interface']['oper-status'] eq up"
+      retries: 3
+      interval: 3
+ #     provider: "{{ credentials }}"
+     with_items:
+     - "{{ neighbors }}"
+     when: item.interface is defined
+
+   - name: Check if the interface has the properly configured ip address
+     junos_command:
+      display: 'xml'
+      commands:
+       - "show interfaces terse {{ item.interface }}"
+      waitfor:
+       - "result[0]['rpc-reply']['interface-information']['physical-interface']['logical-interface']['address-family']['interface-address']['ifa-local'] eq {{ item.local_ip}}/31"
       retries: 3
       interval: 3
  #     provider: "{{ credentials }}"

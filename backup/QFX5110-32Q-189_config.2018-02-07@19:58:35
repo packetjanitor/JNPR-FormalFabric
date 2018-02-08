@@ -54,12 +54,16 @@ set system syslog file messages authorization info
 set system syslog file interactive-commands interactive-commands any
 set interfaces et-0/0/0 unit 0 description to-spine-1
 set interfaces et-0/0/0 unit 0 family inet address 100.0.0.42/31
+set interfaces et-0/0/0 unit 0 family iso
 set interfaces et-0/0/1 unit 0 description to-spine-2
 set interfaces et-0/0/1 unit 0 family inet address 100.0.0.44/31
+set interfaces et-0/0/1 unit 0 family iso
 set interfaces et-0/0/2 unit 0 description to-spine-3
 set interfaces et-0/0/2 unit 0 family inet address 100.0.0.46/31
+set interfaces et-0/0/2 unit 0 family iso
 set interfaces xe-0/0/3:0 unit 0 description to-test-equipment
 set interfaces xe-0/0/3:0 unit 0 family inet address 100.189.1.1/16
+set interfaces xe-0/0/3:0 unit 0 family iso
 set interfaces xe-0/0/3:1 unit 0 description to-test-equipment
 set interfaces xe-0/0/3:1 unit 0 family ethernet-switching interface-mode trunk
 set interfaces xe-0/0/3:1 unit 0 family ethernet-switching vlan members v100
@@ -69,6 +73,7 @@ set interfaces xe-0/0/3:2 unit 0 family ethernet-switching vlan members v200
 set interfaces irb unit 100 family inet address 10.10.10.1/16 virtual-gateway-address 10.10.10.254
 set interfaces irb unit 200 family inet address 10.20.20.1/16 virtual-gateway-address 10.20.20.254
 set interfaces lo0 unit 0 family inet address 100.0.0.189/32 primary
+set interfaces lo0 unit 0 family iso address 49.0001.0001.0001.0189.00
 set interfaces lo0 unit 1 family inet address 10.2.3.89/32 primary
 set interfaces lo0 unit 2 family inet address 10.2.3.189/32 primary
 set routing-options router-id 100.0.0.189
@@ -81,12 +86,12 @@ set protocols bgp group overlay001 neighbor 100.0.0.172
 set protocols bgp group overlay001 neighbor 100.0.0.174
 set protocols bgp group overlay001 neighbor 100.0.0.175
 set protocols bgp group overlay001 neighbor 100.0.0.188
-set protocols ospf reference-bandwidth 1000g
-set protocols ospf area 0.0.0.0 interface et-0/0/0.0
-set protocols ospf area 0.0.0.0 interface et-0/0/1.0
-set protocols ospf area 0.0.0.0 interface et-0/0/2.0
-set protocols ospf area 0.0.0.0 interface xe-0/0/3:0.0 passive
-set protocols ospf area 0.0.0.0 interface lo0.0 passive
+set protocols isis reference-bandwidth 1000g
+set protocols isis interface et-0/0/0.0
+set protocols isis interface et-0/0/1.0
+set protocols isis interface et-0/0/2.0
+set protocols isis interface xe-0/0/3:0.0 passive
+set protocols isis interface lo0.0 passive
 set protocols evpn encapsulation vxlan
 set protocols evpn default-gateway no-gateway-community
 set protocols evpn extended-vni-list all

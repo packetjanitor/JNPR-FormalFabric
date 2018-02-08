@@ -17,7 +17,7 @@
       interval: 3
      with_items:
      - "{{ neighbors }}"
-     when: neighbors is defined
+     when: item.peer_loopback is defined
 
 
    - name: Check if junos devices have learned the directly connected router loopback addresses via OSPF
@@ -31,7 +31,7 @@
       interval: 3
      with_items:
      - "{{ neighbors }}"
-     when: neighbors is defined
+     when: item.peer_loopback is defined
 
    - name: Check if junos devices have learned all of the underlay loopback addresses via OSPF
      junos_command:
@@ -44,4 +44,4 @@
       interval: 3
      with_items:
      - "{{ neighbors }}"
-     when: neighbors is defined
+     when: item.peer_loopback is defined
