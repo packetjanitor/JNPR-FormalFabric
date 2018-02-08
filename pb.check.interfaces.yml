@@ -10,27 +10,27 @@
      junos_command:
       display: 'xml'
       commands:
-       - "show interfaces terse {{ item.local_interface }}"
+       - "show interfaces terse {{ item.interface }}"
       waitfor:
        - "result[0]['rpc-reply']['interface-information']['physical-interface']['admin-status'] eq up"
       retries: 3
       interval: 3
 #      provider: "{{ credentials }}"
      with_items:
-     - "{{ lldp }}"
-     when: lldp is defined
+     - "{{ neighbors }}"
+     when: item.interface is defined
 
 
    - name: check if interfaces op status is up
      junos_command:
       display: 'xml'
       commands:
-       - "show interfaces terse {{ item.local_interface }}"
+       - "show interfaces terse {{ item.interface }}"
       waitfor:
        - "result[0]['rpc-reply']['interface-information']['physical-interface']['oper-status'] eq up"
       retries: 3
       interval: 3
  #     provider: "{{ credentials }}"
      with_items:
-     - "{{ lldp }}"
-     when: lldp is defined
+     - "{{ neighbors }}"
+     when: item.interface is defined

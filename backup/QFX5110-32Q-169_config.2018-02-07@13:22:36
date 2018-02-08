@@ -52,33 +52,26 @@ set system syslog file messages authorization info
 set system syslog file interactive-commands interactive-commands any
 set interfaces et-0/0/0 unit 0 description to-leaf-1
 set interfaces et-0/0/0 unit 0 family inet address 100.0.0.3/31
-set interfaces et-0/0/0 unit 0 family iso
 set interfaces et-0/0/1 unit 0 description to-leaf-2
 set interfaces et-0/0/1 unit 0 family inet address 100.0.0.13/31
-set interfaces et-0/0/1 unit 0 family iso
 set interfaces et-0/0/2 unit 0 description to-leaf-3
 set interfaces et-0/0/2 unit 0 family inet address 100.0.0.23/31
-set interfaces et-0/0/2 unit 0 family iso
 set interfaces et-0/0/3 unit 0 description to-leaf-4
 set interfaces et-0/0/3 unit 0 family inet address 100.0.0.33/31
-set interfaces et-0/0/3 unit 0 family iso
 set interfaces et-0/0/4 unit 0 description to-leaf-5
 set interfaces et-0/0/4 unit 0 family inet address 100.0.0.43/31
-set interfaces et-0/0/4 unit 0 family iso
 set interfaces xe-0/0/5:0 unit 0 description to-test-equipment
 set interfaces xe-0/0/5:0 unit 0 family inet address 100.169.1.1/16
-set interfaces xe-0/0/5:0 unit 0 family iso
 set interfaces lo0 unit 0 family inet address 100.0.0.169/32 primary
-set interfaces lo0 unit 0 family iso address 49.0001.0001.0001.0169.00
 set routing-options router-id 100.0.0.169
 set routing-options autonomous-system 65534
 set routing-options forwarding-table export load-balancing-policy
-set protocols isis reference-bandwidth 1000g
-set protocols isis interface et-0/0/0.0
-set protocols isis interface et-0/0/1.0
-set protocols isis interface et-0/0/2.0
-set protocols isis interface et-0/0/3.0
-set protocols isis interface et-0/0/4.0
-set protocols isis interface xe-0/0/5:0.0 passive
-set protocols isis interface lo0.0
+set protocols ospf reference-bandwidth 1000g
+set protocols ospf area 0.0.0.0 interface et-0/0/0.0
+set protocols ospf area 0.0.0.0 interface et-0/0/1.0
+set protocols ospf area 0.0.0.0 interface et-0/0/2.0
+set protocols ospf area 0.0.0.0 interface et-0/0/3.0
+set protocols ospf area 0.0.0.0 interface et-0/0/4.0
+set protocols ospf area 0.0.0.0 interface xe-0/0/5:0.0 passive
+set protocols ospf area 0.0.0.0 interface lo0.0 passive
 set policy-options policy-statement load-balancing-policy then load-balance per-packet
