@@ -1,0 +1,60 @@
+interfaces {
+{% for neighbor in neighbors %}
+    {{ neighbor.interface }} {
+        unit 0 {
+            description "{{ neighbor.name }}";
+            family inet {
+                address {{ neighbor.local_ip }}/31;
+            }
+        }
+    }
+{% endfor %}
+    lo0 {
+        unit 0 {
+            family inet {
+                address {{ loopback }}/32 {
+                    primary;
+                } 
+            }
+        }
+    }
+}
+protocols {
+    replace:
+    bgp {
+        log-updown
+        group underlay {
+            export underlay-networks;
+            type external;
+            local-as {{ local_asn }};
+            multipath multiple-as;
+{% for neighbor in neighbors %}
+            neighbor {{ neighbor.peer_ip }} {
+                peer-as {{ neighbor.asn }};
+            }
+{% endfor %}
+        }
+    }
+}
+replace:
+routing-options {
+    router-id {{ loopback }};
+    forwarding-table {
+        export load-balancing-policy;
+    }
+}
+
+replace:
+policy-options {
+    policy-statement load-balancing-policy {
+        then {
+            load-balance per-packet;
+        }
+    }
+    policy-statement underlay-networks {
+        term 1 {
+            from protocol direct;
+            then accept;
+        }
+    }
+}
