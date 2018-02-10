@@ -1,0 +1,68 @@
+---
+ - name: create render directories
+   hosts: localhost
+   gather_facts: no
+   tags: 
+   - configuration 
+   tasks:
+
+   - name: create configuration directory
+     file:
+       path: "{{ playbook_dir }}/{{ item }}"
+       state: directory
+     with_items: 
+       - bgp_render
+       - isis_render
+       - ospf_render
+
+ - name: configure devices
+   hosts: junos-ssh
+   connection: local
+   gather_facts: no
+   tags: 
+   -  configuration
+   
+   tasks:
+
+   - name: Render OSPF configuration for junos devices
+     template: 
+       src: "{{playbook_dir}}/templates/replaceospf.j2" 
+       dest: "{{playbook_dir}}/ospf_render/{{ inventory_hostname }}.conf"
+
+   - name: Push OSPF configuration on devices if ansible version is >= 2.4
+     junos_config:
+#      provider: "{{ credentials }}"
+      src: "{{playbook_dir}}/ospf_render/{{ inventory_hostname }}.conf"
+      update: merge
+      src_format: text
+      backup: yes
+      comment: enforce desired OSPF config from ansible
+     when: (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
+
+ - name: Wait for operational states to converge
+   hosts: localhost
+   gather_facts: no
+
+   tasks:
+   - pause: seconds=25
+
+ - name: check op states
+   hosts: junos-ssh
+   connection: local
+   gather_facts: no
+   tags: 
+   - audit
+   roles:
+   - Juniper.junos
+
+
+   tasks:
+
+   - name: Retrieve information from devices running Junos
+     junos_get_facts:
+      host: "{{ inventory_hostname }}"
+#      user: "{{ ADMUSER }}"
+#      passwd: "{{ ADMPASS }}"
+     register: junos
+
+# - include: pb.check.ospf.underlay.yml

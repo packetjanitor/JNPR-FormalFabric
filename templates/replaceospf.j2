@@ -1,4 +1,3 @@
-interfaces {
 {% for neighbor in neighbors %}
     {{ neighbor.interface }} {
         unit 0 {
@@ -19,20 +18,17 @@ interfaces {
         }
     }
 }
+replace:
 protocols {
-    replace:
-    bgp {
-        log-updown
-        group underlay {
-            export underlay-networks;
-            type external;
-            local-as {{ local_asn }};
-            multipath multiple-as;
+    ospf {
+        reference-bandwidth 1000g;
+        area 0.0.0.0 {
 {% for neighbor in neighbors %}
-            neighbor {{ neighbor.peer_ip }} {
-                peer-as {{ neighbor.asn }};
-            }
+            interface {{ neighbor.interface }}.0; 
 {% endfor %}
+            interface lo0.0 {
+                passive;
+            }
         }
     }
 }
@@ -44,18 +40,11 @@ routing-options {
         export load-balancing-policy;
     }
 }
-
 replace:
 policy-options {
     policy-statement load-balancing-policy {
         then {
             load-balance per-packet;
-        }
-    }
-    policy-statement underlay-networks {
-        term 1 {
-            from protocol direct;
-            then accept;
         }
     }
 }
