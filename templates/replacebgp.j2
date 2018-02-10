@@ -2,7 +2,7 @@ interfaces {
 {% for neighbor in neighbors %}
     {{ neighbor.interface }} {
         unit 0 {
-            description "{{ neighbor.name }}";
+            description "connection to {{ neighbor.name }}";
             family inet {
                 address {{ neighbor.local_ip }}/31;
             }
@@ -39,6 +39,7 @@ protocols {
 replace:
 routing-options {
     router-id {{ loopback }};
+    autonomous-system {{ global_asn }};
     forwarding-table {
         export load-balancing-policy;
     }

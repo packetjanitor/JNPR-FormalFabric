@@ -1,4 +1,23 @@
 ---
+ - name: create rollback directories
+   hosts: localhost
+   gather_facts: no
+   tasks:
+
+   - name: create rollback directory
+     file:
+       path: "{{playbook_dir}}/rollback"
+       state: directory
+
+
+   - name: create rollback subdirectories
+     file:
+       path: "{{playbook_dir}}/rollback/{{ item }}"
+       state: directory
+     with_items:
+       - log
+       - diff
+
  - name: Rollback configuration on junos devices
    hosts: junos-ssh
    roles:       
@@ -18,12 +37,12 @@
 
    - name: Rollback junos config task
      junos_rollback:
-      host: "{{ junos_host }}"
+      host: "{{ inventory_hostname }}"
 #      user: "{{ ADMUSER }}"
 #      passwd: "{{ ADMPASS }}"
-      logfile: "{{playbook_dir}}/rollback.log"
-      diffs_file: "{{playbook_dir}}/{{ inventory_hostname }}.diff"
+      logfile: "{{playbook_dir}}/rollback/log/rollback.log"
+      diffs_file: "{{playbook_dir}}/rollback/diff/{{ inventory_hostname }}.diff"
       rollback: "{{ rbid }}" 
-      comment: "configuration rolled back by Ansible using rbid {{ rbid }}"
+      comment: "configuration rolled back by Ansible using rollback id {{ rbid }}"
       #user: "{{ USERNAME }}"
       #passwd: "{{ DEVICE_PASSWORD }}"

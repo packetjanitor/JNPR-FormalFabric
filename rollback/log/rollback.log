@@ -1,0 +1,352 @@
+2018-02-10 08:50:27,294:CONFIG:QFX5110-32Q-171:connecting to host: juniper05@QFX5110-32Q-171:830
+2018-02-10 08:50:27,295:CONFIG:QFX5110-32Q-174:connecting to host: juniper05@QFX5110-32Q-174:830
+2018-02-10 08:50:27,302:CONFIG:QFX5110-32Q-172:connecting to host: juniper05@QFX5110-32Q-172:830
+2018-02-10 08:50:27,302:CONFIG:QFX5110-32Q-170:connecting to host: juniper05@QFX5110-32Q-170:830
+2018-02-10 08:50:27,303:CONFIG:QFX5110-32Q-169:connecting to host: juniper05@QFX5110-32Q-169:830
+2018-02-10 08:50:27,533:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 08:50:27,533:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 08:50:27,537:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 08:50:27,537:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 08:50:27,538:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 08:50:28,145:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 08:50:28,146:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 08:50:28,151:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 08:50:28,152:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 08:50:28,155:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 08:50:28,156:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 08:50:28,156:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 08:50:28,156:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 08:50:28,158:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 08:50:28,158:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 08:50:28,726:ncclient.transport.session:initialized: session-id=53339 | server_capabilities=<dictionary-keyiterator object at 0x7f50b001edb8>
+2018-02-10 08:50:28,726:CONFIG:QFX5110-32Q-174:taking lock
+2018-02-10 08:50:28,726:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:28,737:ncclient.transport.session:initialized: session-id=87434 | server_capabilities=<dictionary-keyiterator object at 0x7f1076b1cdb8>
+2018-02-10 08:50:28,737:CONFIG:QFX5110-32Q-171:taking lock
+2018-02-10 08:50:28,738:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:28,785:ncclient.transport.session:initialized: session-id=88268 | server_capabilities=<dictionary-keyiterator object at 0x7fd2dc6f3db8>
+2018-02-10 08:50:28,785:CONFIG:QFX5110-32Q-169:taking lock
+2018-02-10 08:50:28,786:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:28,792:ncclient.transport.session:initialized: session-id=96395 | server_capabilities=<dictionary-keyiterator object at 0x7f5ad2b7bdb8>
+2018-02-10 08:50:28,792:CONFIG:QFX5110-32Q-172:taking lock
+2018-02-10 08:50:28,793:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:28,793:ncclient.transport.session:initialized: session-id=87396 | server_capabilities=<dictionary-keyiterator object at 0x7fa90591adb8>
+2018-02-10 08:50:28,793:CONFIG:QFX5110-32Q-170:taking lock
+2018-02-10 08:50:28,793:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:28,991:CONFIG:QFX5110-32Q-174:Rolling back to: 0
+2018-02-10 08:50:28,992:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,001:CONFIG:QFX5110-32Q-169:Rolling back to: 0
+2018-02-10 08:50:29,001:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,004:CONFIG:QFX5110-32Q-171:Rolling back to: 0
+2018-02-10 08:50:29,004:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,007:CONFIG:QFX5110-32Q-172:Rolling back to: 0
+2018-02-10 08:50:29,007:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,008:CONFIG:QFX5110-32Q-170:Rolling back to: 0
+2018-02-10 08:50:29,008:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,207:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,220:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,223:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,266:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,272:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,486:CONFIG:QFX5110-32Q-171:committing change, please be patient
+2018-02-10 08:50:29,486:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,488:CONFIG:QFX5110-32Q-170:committing change, please be patient
+2018-02-10 08:50:29,488:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,523:CONFIG:QFX5110-32Q-174:committing change, please be patient
+2018-02-10 08:50:29,523:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,530:CONFIG:QFX5110-32Q-169:committing change, please be patient
+2018-02-10 08:50:29,531:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:29,537:CONFIG:QFX5110-32Q-172:committing change, please be patient
+2018-02-10 08:50:29,537:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:30,639:CONFIG:QFX5110-32Q-174:change completed
+2018-02-10 08:50:30,640:CONFIG:QFX5110-32Q-174:unlocking
+2018-02-10 08:50:30,640:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:30,647:CONFIG:QFX5110-32Q-169:change completed
+2018-02-10 08:50:30,647:CONFIG:QFX5110-32Q-169:unlocking
+2018-02-10 08:50:30,647:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:30,653:CONFIG:QFX5110-32Q-171:change completed
+2018-02-10 08:50:30,653:CONFIG:QFX5110-32Q-171:unlocking
+2018-02-10 08:50:30,653:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:30,654:CONFIG:QFX5110-32Q-172:change completed
+2018-02-10 08:50:30,654:CONFIG:QFX5110-32Q-172:unlocking
+2018-02-10 08:50:30,654:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:30,655:CONFIG:QFX5110-32Q-170:change completed
+2018-02-10 08:50:30,655:CONFIG:QFX5110-32Q-170:unlocking
+2018-02-10 08:50:30,655:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:30,868:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 08:50:30,869:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 08:50:30,870:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 08:50:30,905:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 08:50:30,913:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 08:50:32,135:CONFIG:QFX5110-32Q-175:connecting to host: juniper05@QFX5110-32Q-175:830
+2018-02-10 08:50:32,151:CONFIG:QFX5110-32Q-188:connecting to host: juniper05@QFX5110-32Q-188:830
+2018-02-10 08:50:32,164:CONFIG:QFX5110-32Q-189:connecting to host: juniper05@QFX5110-32Q-189:830
+2018-02-10 08:50:32,370:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 08:50:32,388:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 08:50:32,400:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 08:50:32,891:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 08:50:32,891:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 08:50:32,895:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 08:50:32,895:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 08:50:32,909:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 08:50:32,909:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 08:50:33,472:ncclient.transport.session:initialized: session-id=17268 | server_capabilities=<dictionary-keyiterator object at 0x7fac51c57db8>
+2018-02-10 08:50:33,472:CONFIG:QFX5110-32Q-175:taking lock
+2018-02-10 08:50:33,473:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:33,478:ncclient.transport.session:initialized: session-id=14495 | server_capabilities=<dictionary-keyiterator object at 0x7f357a540db8>
+2018-02-10 08:50:33,479:CONFIG:QFX5110-32Q-188:taking lock
+2018-02-10 08:50:33,479:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:33,493:ncclient.transport.session:initialized: session-id=14432 | server_capabilities=<dictionary-keyiterator object at 0x7fc074d5edb8>
+2018-02-10 08:50:33,494:CONFIG:QFX5110-32Q-189:taking lock
+2018-02-10 08:50:33,494:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:33,741:CONFIG:QFX5110-32Q-175:Rolling back to: 0
+2018-02-10 08:50:33,741:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:33,747:CONFIG:QFX5110-32Q-188:Rolling back to: 0
+2018-02-10 08:50:33,747:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:33,762:CONFIG:QFX5110-32Q-189:Rolling back to: 0
+2018-02-10 08:50:33,762:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:33,958:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:33,964:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:33,978:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:34,224:CONFIG:QFX5110-32Q-175:committing change, please be patient
+2018-02-10 08:50:34,225:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:34,230:CONFIG:QFX5110-32Q-188:committing change, please be patient
+2018-02-10 08:50:34,231:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:34,245:CONFIG:QFX5110-32Q-189:committing change, please be patient
+2018-02-10 08:50:34,245:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:35,347:CONFIG:QFX5110-32Q-175:change completed
+2018-02-10 08:50:35,348:CONFIG:QFX5110-32Q-175:unlocking
+2018-02-10 08:50:35,348:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:35,353:CONFIG:QFX5110-32Q-188:change completed
+2018-02-10 08:50:35,353:CONFIG:QFX5110-32Q-188:unlocking
+2018-02-10 08:50:35,354:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:35,367:CONFIG:QFX5110-32Q-189:change completed
+2018-02-10 08:50:35,367:CONFIG:QFX5110-32Q-189:unlocking
+2018-02-10 08:50:35,368:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 08:50:35,585:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 08:50:35,615:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 08:50:35,620:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 10:03:29,418:CONFIG:QFX5110-32Q-171:connecting to host: juniper05@QFX5110-32Q-171:830
+2018-02-10 10:03:29,419:CONFIG:QFX5110-32Q-174:connecting to host: juniper05@QFX5110-32Q-174:830
+2018-02-10 10:03:29,421:CONFIG:QFX5110-32Q-170:connecting to host: juniper05@QFX5110-32Q-170:830
+2018-02-10 10:03:29,426:CONFIG:QFX5110-32Q-172:connecting to host: juniper05@QFX5110-32Q-172:830
+2018-02-10 10:03:29,435:CONFIG:QFX5110-32Q-169:connecting to host: juniper05@QFX5110-32Q-169:830
+2018-02-10 10:03:29,655:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 10:03:29,655:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 10:03:29,659:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 10:03:29,660:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 10:03:29,665:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 10:03:30,445:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 10:03:30,445:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 10:03:30,451:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 10:03:30,451:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 10:03:30,452:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 10:03:30,452:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 10:03:30,453:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 10:03:30,453:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 10:03:30,453:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 10:03:30,453:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 10:03:31,079:ncclient.transport.session:initialized: session-id=238 | server_capabilities=<dictionary-keyiterator object at 0x7f5508099db8>
+2018-02-10 10:03:31,080:CONFIG:QFX5110-32Q-172:taking lock
+2018-02-10 10:03:31,080:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,084:ncclient.transport.session:initialized: session-id=91915 | server_capabilities=<dictionary-keyiterator object at 0x7f43c3063db8>
+2018-02-10 10:03:31,084:CONFIG:QFX5110-32Q-169:taking lock
+2018-02-10 10:03:31,084:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,085:ncclient.transport.session:initialized: session-id=91073 | server_capabilities=<dictionary-keyiterator object at 0x7f32894bedb8>
+2018-02-10 10:03:31,085:CONFIG:QFX5110-32Q-171:taking lock
+2018-02-10 10:03:31,085:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,098:ncclient.transport.session:initialized: session-id=91035 | server_capabilities=<dictionary-keyiterator object at 0x7f7bf4148db8>
+2018-02-10 10:03:31,098:CONFIG:QFX5110-32Q-170:taking lock
+2018-02-10 10:03:31,098:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,102:ncclient.transport.session:initialized: session-id=57081 | server_capabilities=<dictionary-keyiterator object at 0x7ff9f4e52db8>
+2018-02-10 10:03:31,102:CONFIG:QFX5110-32Q-174:taking lock
+2018-02-10 10:03:31,102:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,295:CONFIG:QFX5110-32Q-172:Rolling back to: 1
+2018-02-10 10:03:31,295:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,299:CONFIG:QFX5110-32Q-169:Rolling back to: 1
+2018-02-10 10:03:31,299:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,300:CONFIG:QFX5110-32Q-171:Rolling back to: 1
+2018-02-10 10:03:31,300:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,313:CONFIG:QFX5110-32Q-170:Rolling back to: 1
+2018-02-10 10:03:31,313:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,317:CONFIG:QFX5110-32Q-174:Rolling back to: 1
+2018-02-10 10:03:31,317:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,560:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,564:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,565:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,578:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,582:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,880:CONFIG:QFX5110-32Q-169:committing change, please be patient
+2018-02-10 10:03:31,880:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,894:CONFIG:QFX5110-32Q-170:committing change, please be patient
+2018-02-10 10:03:31,894:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,931:CONFIG:QFX5110-32Q-171:committing change, please be patient
+2018-02-10 10:03:31,931:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:31,997:CONFIG:QFX5110-32Q-174:committing change, please be patient
+2018-02-10 10:03:31,998:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:32,076:CONFIG:QFX5110-32Q-172:committing change, please be patient
+2018-02-10 10:03:32,076:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:34,000:CONFIG:QFX5110-32Q-169:change completed
+2018-02-10 10:03:34,000:CONFIG:QFX5110-32Q-169:unlocking
+2018-02-10 10:03:34,000:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:34,001:CONFIG:QFX5110-32Q-171:change completed
+2018-02-10 10:03:34,001:CONFIG:QFX5110-32Q-171:unlocking
+2018-02-10 10:03:34,002:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:34,013:CONFIG:QFX5110-32Q-170:change completed
+2018-02-10 10:03:34,013:CONFIG:QFX5110-32Q-170:unlocking
+2018-02-10 10:03:34,014:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:34,117:CONFIG:QFX5110-32Q-174:change completed
+2018-02-10 10:03:34,117:CONFIG:QFX5110-32Q-174:unlocking
+2018-02-10 10:03:34,117:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:34,147:CONFIG:QFX5110-32Q-172:change completed
+2018-02-10 10:03:34,147:CONFIG:QFX5110-32Q-172:unlocking
+2018-02-10 10:03:34,147:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:34,266:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 10:03:34,267:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 10:03:34,278:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 10:03:34,382:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 10:03:34,412:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 10:03:35,255:CONFIG:QFX5110-32Q-175:connecting to host: juniper05@QFX5110-32Q-175:830
+2018-02-10 10:03:35,454:CONFIG:QFX5110-32Q-188:connecting to host: juniper05@QFX5110-32Q-188:830
+2018-02-10 10:03:35,466:CONFIG:QFX5110-32Q-189:connecting to host: juniper05@QFX5110-32Q-189:830
+2018-02-10 10:03:35,491:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 10:03:35,688:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 10:03:35,698:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_7.2)
+2018-02-10 10:03:35,976:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 10:03:35,976:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 10:03:36,179:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 10:03:36,179:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 10:03:36,194:ncclient.transport.ssh:Auth banner: 
+ 
+ System is in use for a customer POC testing 
+ 
+ *** Please do not make changes before contacting the Herndon POC admins *** 
+
+
+2018-02-10 10:03:36,195:ncclient.transport.ssh:Authentication (publickey) successful!
+2018-02-10 10:03:36,555:ncclient.transport.session:initialized: session-id=21014 | server_capabilities=<dictionary-keyiterator object at 0x7f6514f00db8>
+2018-02-10 10:03:36,555:CONFIG:QFX5110-32Q-175:taking lock
+2018-02-10 10:03:36,556:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:36,759:ncclient.transport.session:initialized: session-id=18241 | server_capabilities=<dictionary-keyiterator object at 0x7fab60152db8>
+2018-02-10 10:03:36,759:CONFIG:QFX5110-32Q-188:taking lock
+2018-02-10 10:03:36,760:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:36,787:ncclient.transport.session:initialized: session-id=18178 | server_capabilities=<dictionary-keyiterator object at 0x7fe6eea99db8>
+2018-02-10 10:03:36,787:CONFIG:QFX5110-32Q-189:taking lock
+2018-02-10 10:03:36,788:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:36,823:CONFIG:QFX5110-32Q-175:Rolling back to: 1
+2018-02-10 10:03:36,823:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:37,026:CONFIG:QFX5110-32Q-188:Rolling back to: 1
+2018-02-10 10:03:37,027:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:37,055:CONFIG:QFX5110-32Q-189:Rolling back to: 1
+2018-02-10 10:03:37,056:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:37,091:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:37,295:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:37,322:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:37,609:CONFIG:QFX5110-32Q-175:committing change, please be patient
+2018-02-10 10:03:37,609:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:37,791:CONFIG:QFX5110-32Q-189:committing change, please be patient
+2018-02-10 10:03:37,791:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:37,814:CONFIG:QFX5110-32Q-188:committing change, please be patient
+2018-02-10 10:03:37,814:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:39,738:CONFIG:QFX5110-32Q-175:change completed
+2018-02-10 10:03:39,738:CONFIG:QFX5110-32Q-175:unlocking
+2018-02-10 10:03:39,738:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:39,892:CONFIG:QFX5110-32Q-188:change completed
+2018-02-10 10:03:39,892:CONFIG:QFX5110-32Q-188:unlocking
+2018-02-10 10:03:39,892:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:39,920:CONFIG:QFX5110-32Q-189:change completed
+2018-02-10 10:03:39,920:CONFIG:QFX5110-32Q-189:unlocking
+2018-02-10 10:03:39,921:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-02-10 10:03:40,004:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 10:03:40,110:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-02-10 10:03:40,137:ncclient.operations.rpc:Requesting 'CloseSession'

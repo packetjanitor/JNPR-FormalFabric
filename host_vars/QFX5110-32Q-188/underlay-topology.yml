@@ -1,5 +1,6 @@
 ---
 loopback: 100.0.0.188
+global_asn: 65534
 local_asn: 65188
 neighbors:
    - interface: et-0/0/0
