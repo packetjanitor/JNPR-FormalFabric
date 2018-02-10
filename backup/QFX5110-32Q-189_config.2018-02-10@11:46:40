@@ -1,5 +1,5 @@
 set version 17.4R1.16
-set groups POC_Lab system host-name poc-qfx5110-188
+set groups POC_Lab system host-name poc-qfx5110-189
 set groups POC_Lab system domain-name amerpoc.jnpr.net
 set groups POC_Lab system backup-router 172.25.45.1
 set groups POC_Lab system time-zone America/New_York
@@ -31,7 +31,7 @@ set groups POC_Lab system syslog host 172.25.45.6 authorization any
 set groups POC_Lab system ntp server 172.25.124.17 prefer
 set groups POC_Lab system ntp server 66.129.255.62 prefer
 set groups POC_Lab chassis fpc 0 pic 0 port 3 channel-speed 10g
-set groups POC_Lab interfaces em0 unit 0 family inet address 172.25.45.188/24
+set groups POC_Lab interfaces em0 unit 0 family inet address 172.25.45.189/24
 set groups POC_Lab snmp community public
 set groups POC_Lab forwarding-options vxlan-routing next-hop 16384
 set groups POC_Lab forwarding-options vxlan-routing interface-num 8192
