@@ -1,0 +1,76 @@
+
+[edit]
+-  interfaces {
+-      et-0/0/0 {
+-          unit 0 {
+-              description poc-qfx5110-169;
+-              family inet {
+-                  address 100.0.0.32/31;
+-              }
+-          }
+-      }
+-      et-0/0/1 {
+-          unit 0 {
+-              description poc-qfx5110-170;
+-              family inet {
+-                  address 100.0.0.34/31;
+-              }
+-          }
+-      }
+-      et-0/0/2 {
+-          unit 0 {
+-              description poc-qfx5110-171;
+-              family inet {
+-                  address 100.0.0.36/31;
+-              }
+-          }
+-      }
+-      lo0 {
+-          unit 0 {
+-              family inet {
+-                  address 100.0.0.188/32 {
+-                      primary;
+-                  }
+-              }
+-          }
+-      }
+-  }
+-  routing-options {
+-      router-id 100.0.0.188;
+-      forwarding-table {
+-          export load-balancing-policy;
+-      }
+-  }
+-  protocols {
+-      bgp {
+-          log-updown;
+-          group underlay {
+-              type external;
+-              export underlay-networks;
+-              local-as 65188;
+-              multipath multiple-as;
+-              neighbor 100.0.0.33 {
+-                  peer-as 65169;
+-              }
+-              neighbor 100.0.0.35 {
+-                  peer-as 65170;
+-              }
+-              neighbor 100.0.0.37 {
+-                  peer-as 65171;
+-              }
+-          }
+-      }
+-  }
+-  policy-options {
+-      policy-statement load-balancing-policy {
+-          then {
+-              load-balance per-packet;
+-          }
+-      }
+-      policy-statement underlay-networks {
+-          term 1 {
+-              from protocol direct;
+-              then accept;
+-          }
+-      }
+-  }
