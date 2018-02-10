@@ -5,18 +5,21 @@ local_asn: 65175
 neighbors:
    - interface: et-0/0/0
      name: poc-qfx5110-169
+     peer_interface: et-0/0/2
      asn: 65169
      peer_ip: 100.0.0.23 
      local_ip: 100.0.0.22
      peer_loopback: 100.0.0.169
    - interface: et-0/0/1  
      name: poc-qfx5110-170
+     peer_interface: et-0/0/2
      asn: 65170
      peer_ip: 100.0.0.25
      local_ip: 100.0.0.24
      peer_loopback: 100.0.0.170
    - interface: et-0/0/2
      name: poc-qfx5110-171
+     peer_interface: et-0/0/2
      asn: 65171
      peer_ip: 100.0.0.27
      local_ip: 100.0.0.26

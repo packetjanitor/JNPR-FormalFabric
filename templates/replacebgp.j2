@@ -2,7 +2,7 @@ interfaces {
 {% for neighbor in neighbors %}
     {{ neighbor.interface }} {
         unit 0 {
-            description "connection to {{ neighbor.name }}";
+            description "connection to {{ neighbor.name }} on {{neighbor.peer_interface}}";
             family inet {
                 address {{ neighbor.local_ip }}/31;
             }

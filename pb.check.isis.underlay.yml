@@ -4,6 +4,49 @@
    connection: local
    gather_facts: no
    tasks:
+   - name: Check if interface is configured to be up.
+     junos_command:
+      display: 'xml'
+      commands:
+       - "show interfaces terse {{ item.interface }}"
+      waitfor:
+       - "result[0]['rpc-reply']['interface-information']['physical-interface']['admin-status'] eq up"
+      retries: 3
+      interval: 3
+#      provider: "{{ credentials }}"
+     with_items:
+     - "{{ neighbors }}"
+     when: item.interface is defined
+
+   - name: Check if interface status is operational.
+     junos_command:
+      display: 'xml'
+      commands:
+       - "show interfaces terse {{ item.interface }}"
+      waitfor:
+       - "result[0]['rpc-reply']['interface-information']['physical-interface']['oper-status'] eq up"
+      retries: 3
+      interval: 3
+ #     provider: "{{ credentials }}"
+     with_items:
+     - "{{ neighbors }}"
+     when: item.interface is defined
+
+   - name: Check if the interface has the properly configured ip address
+     junos_command:
+      display: 'xml'
+      commands:
+       - "show interfaces terse {{ item.interface }}"
+      waitfor:
+       - "result[0]['rpc-reply']['interface-information']['physical-interface']['logical-interface']['address-family'][0]
+['interface-address']['ifa-local'] eq {{ item.local_ip}}/31"
+      retries: 3
+      interval: 3
+ #     provider: "{{ credentials }}"
+     with_items:
+     - "{{ neighbors }}"
+     when: item.interface is defined
+
    - name: Check if all ISIS adjacencies are formed and up.
      junos_command:
       display: 'xml'
@@ -17,9 +60,11 @@
      - "{{ neighbors }}"
      when: item.name is defined
      register: response
+
  #  - name: "Debug with items. 1st item"
  #    debug:
  #       var: response['results'][0]['output'][0]['rpc-reply']
+
    - name: Check if junos devices have learned all of the directly connected loopback addresses via ISIS
      junos_command:
       display: 'xml'
@@ -31,7 +76,7 @@
       interval: 3
      with_items:
      - "{{ neighbors }}"
-     when: neighbors is defined
+     when: item.peer_loopback is defined
 
    - name: Check if junos devices have learned all of the loopback addresses via ISIS
      junos_command:
@@ -44,4 +89,4 @@
       interval: 3
      with_items:
      - "{{ neighbors }}"
-     when: neighbors is defined
+     when: item.peer_loopback is defined
