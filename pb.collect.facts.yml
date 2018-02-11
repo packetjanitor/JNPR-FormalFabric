@@ -1,3 +1,8 @@
+# Copyright 2018, Juniper Networks Pvt Ltd.
+# All rights reserved.
+# A quick check of the availability of the device by printing out the SW Version.
+# command example: ansible-playbook --ask-vault-pass <filename> —extra-vars “<var-name>=<input>”
+# Successfully ran on ansible version: ansible 2.4.2.0: ansible-galaxy list Juniper.junos,1.4.3
 ---
  - name: create facts directory
    hosts: localhost

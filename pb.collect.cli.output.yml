@@ -1,4 +1,8 @@
-
+# Copyright 2018, Juniper Networks Pvt Ltd.
+# All rights reserved.
+# Collects CLI output for multiple commands in the cli.yml file. 
+# command example: ansible-playbook --ask-vault-pass <filename>
+# Successfully ran on ansible version: ansible 2.4.2.0: ansible-galaxy list Juniper.junos,1.4.3
 ---
  - name: create cli directories
    hosts: localhost
