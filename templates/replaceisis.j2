@@ -26,6 +26,7 @@ interfaces {
 protocols {
     replace:
     isis {
+        export underlay-networks;
         reference-bandwidth 1000g;
 {% for neighbor in neighbors %}
         interface {{ neighbor.interface }}.0 level 1 disable;
@@ -47,6 +48,12 @@ policy-options {
     policy-statement load-balancing-policy {
         then {
             load-balance per-packet;
+        }
+    }
+    policy-statement underlay-networks {
+        term 1 {
+            from protocol direct;
+            then accept;
         }
     }
 }
