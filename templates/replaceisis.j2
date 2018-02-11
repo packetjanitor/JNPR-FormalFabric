@@ -28,9 +28,9 @@ protocols {
     isis {
         reference-bandwidth 1000g;
 {% for neighbor in neighbors %}
-        interface {{ neighbor.interface }}.0;
+        interface {{ neighbor.interface }}.0 level 1 disable;
 {% endfor %}
-        interface lo0.0 {
+        interface lo0.0 level 1 disable {
         }
     }
 }

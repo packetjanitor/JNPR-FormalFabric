@@ -47,7 +47,7 @@
    gather_facts: no
 
    tasks:
-   - pause: seconds=25
+   - pause: seconds=70
 
  - name: check op states
    hosts: junos-ssh

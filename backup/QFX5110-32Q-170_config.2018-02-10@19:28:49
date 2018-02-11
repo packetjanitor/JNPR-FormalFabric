@@ -1,5 +1,5 @@
 set version 17.4R1.16
-set groups POC_Lab system host-name poc-qfx5110-172
+set groups POC_Lab system host-name poc-qfx5110-170
 set groups POC_Lab system domain-name amerpoc.jnpr.net
 set groups POC_Lab system backup-router 172.25.45.1
 set groups POC_Lab system time-zone America/New_York
@@ -30,11 +30,9 @@ set groups POC_Lab system services netconf ssh
 set groups POC_Lab system syslog host 172.25.45.6 authorization any
 set groups POC_Lab system ntp server 172.25.124.17 prefer
 set groups POC_Lab system ntp server 66.129.255.62 prefer
-set groups POC_Lab chassis fpc 0 pic 0 port 3 channel-speed 10g
-set groups POC_Lab interfaces em0 unit 0 family inet address 172.25.45.172/24
+set groups POC_Lab chassis fpc 0 pic 0 port 5 channel-speed 10g
+set groups POC_Lab interfaces em0 unit 0 family inet address 172.25.45.170/24
 set groups POC_Lab snmp community public
-set groups POC_Lab forwarding-options vxlan-routing next-hop 16384
-set groups POC_Lab forwarding-options vxlan-routing interface-num 8192
 set groups POC_Lab routing-options static route 0.0.0.0/0 next-hop 172.25.45.1
 set groups POC_Lab protocols lldp interface all
 set apply-groups POC_Lab
@@ -51,3 +49,31 @@ set system syslog user * any emergency
 set system syslog file messages any notice
 set system syslog file messages authorization info
 set system syslog file interactive-commands interactive-commands any
+set interfaces et-0/0/0 unit 0 description "connection to poc-qfx5110-172 on interface et-0/0/1"
+set interfaces et-0/0/0 unit 0 family inet address 100.0.0.5/31
+set interfaces et-0/0/0 unit 0 family iso
+set interfaces et-0/0/1 unit 0 description "connection to poc-qfx5110-174 on interface et-0/0/1"
+set interfaces et-0/0/1 unit 0 family inet address 100.0.0.15/31
+set interfaces et-0/0/1 unit 0 family iso
+set interfaces et-0/0/2 unit 0 description "connection to poc-qfx5110-175 on interface et-0/0/1"
+set interfaces et-0/0/2 unit 0 family inet address 100.0.0.25/31
+set interfaces et-0/0/2 unit 0 family iso
+set interfaces et-0/0/3 unit 0 description "connection to poc-qfx5110-188 on interface et-0/0/1"
+set interfaces et-0/0/3 unit 0 family inet address 100.0.0.35/31
+set interfaces et-0/0/3 unit 0 family iso
+set interfaces et-0/0/4 unit 0 description "connection to poc-qfx5110-189 on interface et-0/0/1"
+set interfaces et-0/0/4 unit 0 family inet address 100.0.0.45/31
+set interfaces et-0/0/4 unit 0 family iso
+set interfaces lo0 unit 0 family inet address 100.0.0.170/32 primary
+set interfaces lo0 unit 0 family iso address 49.0001.0001.0001.0170.00
+set routing-options router-id 100.0.0.170
+set routing-options autonomous-system 65534
+set routing-options forwarding-table export load-balancing-policy
+set protocols isis reference-bandwidth 1000g
+set protocols isis interface et-0/0/0.0 level 1 disable
+set protocols isis interface et-0/0/1.0 level 1 disable
+set protocols isis interface et-0/0/2.0 level 1 disable
+set protocols isis interface et-0/0/3.0 level 1 disable
+set protocols isis interface et-0/0/4.0 level 1 disable
+set protocols isis interface lo0.0 level 1 disable
+set policy-options policy-statement load-balancing-policy then load-balance per-packet
