@@ -51,24 +51,3 @@ set system syslog user * any emergency
 set system syslog file messages any notice
 set system syslog file messages authorization info
 set system syslog file interactive-commands interactive-commands any
-set interfaces et-0/0/0 unit 0 description "connection to poc-qfx5110-169 on interface et-0/0/0"
-set interfaces et-0/0/0 unit 0 family inet address 100.0.0.2/31
-set interfaces et-0/0/1 unit 0 description "connection to poc-qfx5110-170 on interface et-0/0/0"
-set interfaces et-0/0/1 unit 0 family inet address 100.0.0.4/31
-set interfaces et-0/0/2 unit 0 description "connection to poc-qfx5110-171 on interface et-0/0/0"
-set interfaces et-0/0/2 unit 0 family inet address 100.0.0.6/31
-set interfaces lo0 unit 0 family inet address 100.0.0.172/32 primary
-set routing-options router-id 100.0.0.172
-set routing-options autonomous-system 65534
-set routing-options forwarding-table export load-balancing-policy
-set protocols bgp log-updown
-set protocols bgp group underlay type external
-set protocols bgp group underlay export underlay-networks
-set protocols bgp group underlay local-as 65172
-set protocols bgp group underlay multipath multiple-as
-set protocols bgp group underlay neighbor 100.0.0.3 peer-as 65169
-set protocols bgp group underlay neighbor 100.0.0.5 peer-as 65170
-set protocols bgp group underlay neighbor 100.0.0.7 peer-as 65171
-set policy-options policy-statement load-balancing-policy then load-balance per-packet
-set policy-options policy-statement underlay-networks term 1 from protocol direct
-set policy-options policy-statement underlay-networks term 1 then accept
