@@ -40,7 +40,7 @@
       update: merge
       src_format: text
       backup: yes
-      comment: enforce desired OSPF config from ansible
+      comment: enforce desired ISIS config from ansible
      when: (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
 
  - name: Wait for operational states to converge
@@ -48,7 +48,7 @@
    gather_facts: no
 
    tasks:
-   - pause: seconds=70
+   - pause: seconds=120
 
  - name: check op states
    hosts: junos-ssh
