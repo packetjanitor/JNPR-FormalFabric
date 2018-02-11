@@ -1,0 +1,53 @@
+set version 17.4R1.16
+set groups POC_Lab system host-name poc-qfx5110-174
+set groups POC_Lab system domain-name amerpoc.jnpr.net
+set groups POC_Lab system backup-router 172.25.45.1
+set groups POC_Lab system time-zone America/New_York
+set groups POC_Lab system authentication-order password
+set groups POC_Lab system authentication-order radius
+set groups POC_Lab system root-authentication encrypted-password "$1$f1VUEVN3$P9LmFmM90qmJSEsdPZJtA0"
+set groups POC_Lab system name-server 172.25.124.10
+set groups POC_Lab system name-server 172.29.131.60
+set groups POC_Lab system radius-server 172.25.46.3 secret "$9$6Ia3CpOhSeX7V1R7VwYZG69Ap1RcylMLx"
+set groups POC_Lab system radius-server 172.25.46.3 timeout 1
+set groups POC_Lab system radius-server 172.25.46.3 retry 1
+set groups POC_Lab system login message "\n \n System is in use for a customer POC testing \n \n *** Please do not make changes before contacting the Herndon POC admins *** \n\n"
+set groups POC_Lab system login user lab uid 2001
+set groups POC_Lab system login user lab class superuser
+set groups POC_Lab system login user lab authentication encrypted-password "$1$gz.0IbEX$wXEZsNN169oWGVRSzsWEt1"
+set groups POC_Lab system login user admin uid 2004
+set groups POC_Lab system login user admin class superuser
+set groups POC_Lab system login user admin authentication encrypted-password "$1$iF6/a6kj$qt3NdAF7s0L.AFYw.vdIO."
+set groups POC_Lab system login user remote full-name "all remote users"
+set groups POC_Lab system login user remote uid 2000
+set groups POC_Lab system login user remote class super-user
+set groups POC_Lab system services ftp
+set groups POC_Lab system services ssh root-login allow
+set groups POC_Lab system services ssh protocol-version v2
+set groups POC_Lab system services telnet
+set groups POC_Lab system services xnm-clear-text
+set groups POC_Lab system services netconf ssh
+set groups POC_Lab system syslog host 172.25.45.6 authorization any
+set groups POC_Lab system ntp server 172.25.124.17 prefer
+set groups POC_Lab system ntp server 66.129.255.62 prefer
+set groups POC_Lab chassis fpc 0 pic 0 port 3 channel-speed 10g
+set groups POC_Lab interfaces em0 unit 0 family inet address 172.25.45.174/24
+set groups POC_Lab snmp community public
+set groups POC_Lab forwarding-options vxlan-routing next-hop 16384
+set groups POC_Lab forwarding-options vxlan-routing interface-num 8192
+set groups POC_Lab routing-options static route 0.0.0.0/0 next-hop 172.25.45.1
+set groups POC_Lab protocols lldp interface all
+set apply-groups POC_Lab
+set system login user juniper05 uid 2007
+set system login user juniper05 class super-user
+set system login user juniper05 authentication ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXPghc9zk6bTUwS/hGcAP6JqEijyipwXm9PiMET8k1hzel93GOR5MOROLXFP4ff6nFMMP129VwLkD4O0/JFNWkhW27FbENYKLqCffpROxN2u7DC5fiSZMhjX//hGTJRkn2Jk/0p4YO1rEZkDA5BBqy3fMDo9UalAH5g0fBaZCON1WSdFrq90jP6B51FwJv6XwYlVVn2MiObiIrsSqzORFeEhp1NSpC9bcnizAot2XkY2paAEuC97wYom6+If2T10CMsK13rfzyt6w0LLnyQKGkn1gVDN1gAkM+EEIPg/8Pncb9BJbIxao5dakNPH5A1jY0coNyfnkW9QIyfmEWXm7B juniper05@platform"
+set system login user junivator uid 2006
+set system login user junivator class super-user
+set system login user junivator authentication ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCrX4KrY5aSH/AKHCJYVkDpP8dJss8wKKP5XOpOeGMJ8Dk3xzC6udYVM1M8XzdvJON8+ov+epGl++f7DL8f7qabnGufpo5Arvijzl/JZKd6xKhq35DLI8dOrHAVB36FsOuFIF+DuZR5XJbI9Bl39CC5WSuvBKJZMrpTdHSTv76mQTeSyw3rxh3Hz1Do4UzQUyaJ8vm/Sur36/0xRsCQf/MbIrQ+j/88opTlIWUchlqeVZXwuievaceVbbgUJDCxU3fMf6TRcuGQxlOdd5LUeb6bSUnmdsZO/NFHTUarKNAnCmgF2dX91/0rf8iqXwXhm5jxaPktL3UUo6Q0wO9EMQTP junivator@Formal-Auto"
+set system login user rescueme uid 2002
+set system login user rescueme class super-user
+set system login user rescueme authentication encrypted-password "$6$.d6QpMEs$8iz8XnMckkHL5I7vdq.7fwzOAbWJ2ve8Iqrh2d62XpFktUO248Pa2H0LPjYxXECszvXhhM3qWpLmMND6px9Pi."
+set system syslog user * any emergency
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any

@@ -18,7 +18,7 @@ interfaces {
                 } 
             }
             family iso {
-                address {{ iso_loopback }}
+                address {{ iso_loopback }};
             }
         }
     }
@@ -30,8 +30,7 @@ protocols {
 {% for neighbor in neighbors %}
         interface {{ neighbor.interface }}.0;
 {% endfor %}
-        interface lo0.0 }
-            }
+        interface lo0.0 {
         }
     }
 }
