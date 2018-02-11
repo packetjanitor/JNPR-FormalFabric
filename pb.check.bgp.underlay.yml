@@ -15,7 +15,7 @@
        - "result[0]['rpc-reply']['interface-information']['physical-interface']['admin-status'] eq up"
       retries: 3
       interval: 3
-#      provider: "{{ credentials }}"
+      provider: "{{ credentials }}"
      with_items:
      - "{{ neighbors }}"
      when: item.interface is defined
@@ -29,7 +29,7 @@
        - "result[0]['rpc-reply']['interface-information']['physical-interface']['oper-status'] eq up"
       retries: 3
       interval: 3
- #     provider: "{{ credentials }}"
+      provider: "{{ credentials }}"
      with_items:
      - "{{ neighbors }}"
      when: item.interface is defined
@@ -43,7 +43,7 @@
        - "result[0]['rpc-reply']['interface-information']['physical-interface']['logical-interface']['address-family']['interface-address']['ifa-local'] eq {{ item.local_ip}}/31"
       retries: 3
       interval: 3
- #     provider: "{{ credentials }}"
+      provider: "{{ credentials }}"
      with_items:
      - "{{ neighbors }}"
      when: item.interface is defined
@@ -51,7 +51,7 @@
    - name: Check if all junos devices have established BGP connections to all UNDERLAY neigbors
      junos_command:
       display: 'xml' 
-#      provider: "{{ credentials }}"
+      provider: "{{ credentials }}"
       commands:
        - show bgp neighbor "{{ item.peer_ip }}"
       wait_for:
@@ -65,7 +65,7 @@
    - name: Verify devices have learned routes in the UNDERLAY. 
      junos_command:
       display: 'xml'
- #     provider: "{{ credentials }}"
+      provider: "{{ credentials }}"
       commands:
        - show route receive-protocol bgp "{{ item.peer_ip }}" table inet.0"
       waitfor:
@@ -79,7 +79,7 @@
    - name: Verify devices have learned the loopback routes in the UNDERLAY via the proper ASN and peer IP.
      junos_command:
       display: 'xml'
- #     provider: "{{ credentials }}"
+      provider: "{{ credentials }}"
       commands:
        - show route receive-protocol bgp "{{ item.peer_ip }}" aspath-regex "{{ item.asn }}" table inet.0 "{{ item.peer_loopback }}" 
       waitfor:

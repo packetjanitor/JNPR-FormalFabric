@@ -10,6 +10,8 @@
    - name: Check if Junos devices can ping directly connected ip addresses via the source interface of the ip address
      junos_ping:
         host: "{{ inventory_hostname }}"
+        user: "{{ ADMUSER }}"
+        passwd: "{{ ADMPASS }}"
         interface: "{{ item.interface }}"
         dest_ip: "{{ item.peer_ip }}"
         source_ip: "{{ item.local_ip }}"
@@ -20,6 +22,8 @@
    - name: Check if Junos devices can ping adjacent loopback IP addresses from their own loopback ip address.
      junos_ping:
         host: "{{ inventory_hostname }}"
+        user: "{{ ADMUSER }}"
+        passwd: "{{ ADMPASS }}"
         dest_ip: "{{ item.peer_loopback }}"
         source_ip: "{{ loopback }}"
         ttl: 1
@@ -29,6 +33,8 @@
    - name: Check if Junos devices can ping adjacent loopback IP addresses via the Source Interface of the IP Address 
      junos_ping:
         host: "{{ inventory_hostname }}"
+        user: "{{ ADMUSER }}"
+        passwd: "{{ ADMPASS }}"
         interface: "{{ item.interface }}"
         dest_ip: "{{ item.peer_loopback }}"
         source_ip: "{{ item.local_ip }}"

@@ -25,24 +25,14 @@
    connection: local
    gather_facts: no
 
-   #vars_prompt:
-    #- name: DEVICE_PASSWORD
-    #  prompt: Device password
-    #  private: yes
-    #- name: USERNAME
-    #  prompt: User name
-    #  private: no
-
    tasks:
 
    - name: Rollback junos config task
      junos_rollback:
       host: "{{ inventory_hostname }}"
-#      user: "{{ ADMUSER }}"
-#      passwd: "{{ ADMPASS }}"
+      user: "{{ ADMUSER }}"
+      passwd: "{{ ADMPASS }}"
       logfile: "{{playbook_dir}}/rollback/log/rollback.log"
       diffs_file: "{{playbook_dir}}/rollback/diff/{{ inventory_hostname }}.diff"
       rollback: "{{ rbid }}" 
       comment: "configuration rolled back by Ansible using rollback id {{ rbid }}"
-      #user: "{{ USERNAME }}"
-      #passwd: "{{ DEVICE_PASSWORD }}"

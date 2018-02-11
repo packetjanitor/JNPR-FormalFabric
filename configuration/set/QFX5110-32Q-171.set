@@ -36,13 +36,12 @@ set groups POC_Lab snmp community public
 set groups POC_Lab routing-options static route 0.0.0.0/0 next-hop 172.25.45.1
 set groups POC_Lab protocols lldp interface all
 set apply-groups POC_Lab
-set system login user jnpradmin uid 2005
-set system login user jnpradmin class super-user
-set system login user jnpradmin authentication ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCquUbCqe2B5XbWRhzzyavno5R54AUMU41JR0zf1+Zveh1J6jc1qp6qTjttSBn1VOhJzVxZx+GnbIFcad3WV42H1WT1i5/cpRZyZYSWM7VPPrGcHO9fftXD6qED7fr82Q3p+e2cypc/6xxuH3fSSS0L59rdd4hSKivvhEz4sIXf/3ncaWVN5csdpTYiHyhNvv9Vd7a1Cr/ocFaGC/RyhJnG25+nrb9tfxleBC5pysqIPApAmKvFNrmbpZvwD0M7Vf8XBbXk7/eQ9gfxAlYzmw3ccR7OtfJ00gq6gxfnJGu90h4PeAdtk6NA9okRzx7iLdz/UHPyxjbdFo/hQsuSkY8n jnpradmin@AutoMach"
+set system login user juniper05 uid 2007
+set system login user juniper05 class super-user
+set system login user juniper05 authentication ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXPghc9zk6bTUwS/hGcAP6JqEijyipwXm9PiMET8k1hzel93GOR5MOROLXFP4ff6nFMMP129VwLkD4O0/JFNWkhW27FbENYKLqCffpROxN2u7DC5fiSZMhjX//hGTJRkn2Jk/0p4YO1rEZkDA5BBqy3fMDo9UalAH5g0fBaZCON1WSdFrq90jP6B51FwJv6XwYlVVn2MiObiIrsSqzORFeEhp1NSpC9bcnizAot2XkY2paAEuC97wYom6+If2T10CMsK13rfzyt6w0LLnyQKGkn1gVDN1gAkM+EEIPg/8Pncb9BJbIxao5dakNPH5A1jY0coNyfnkW9QIyfmEWXm7B juniper05@platform"
 set system login user junivator uid 2006
 set system login user junivator class super-user
-set system login user junivator authentication ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+Z33/jBtEytTjGdXZXpLk95+9WneKL3HvNXAae7E3xylPZ0Q6pcPUgngDtnGF4SVXnI1YImQZNj4cVvUYMMw3QQ8hC0DAWF9n1Ov6tPN3QawkMaz4dhaVrz2qV4nQ0pytOecZmNgLy/YaYcxKHMI6jd3eKTAPt6M/qj+HlTfBdkkXmIQ09V35TtfNiVP+dgTYN3+1SudWjX/48I+QN1oaff9F6kKER8974/5JVAZUxWp+2dGH7ULX99gQACEJoysl0XHWsAQcakgnzoSOK/HQamArbuPtmV8yX7fhJsw5HwUHB2wvRvJ9Y77jVDI4H/vYEtWXEsRwwfz4t5kNYfQR junivator@automation"
-set system login user junivator authentication ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDL/Hi+hk25C5iXlUTI+mjHiRuCchwQEs01Ctn77y92KNStN+d0Q/d1dhavjwxE1ucfbKdmTTLUy7KV6EPoAyvgojHwX1m+/YGiApvslwrqmZow2Nju+MLYUYfrY5f1vZFLkT6XVL4Zl58OZExfQEwCf+BmUYls1JrjwUHtrN7b90Fxi02LFw7HWpPq5HMVL7CiLWUfIY/JDJbWMlq//9A7uaSAS7kw5Ou6MFQjB7sQ35PiwCu/QXNVMyA6VckTS22OsUa6I1iXywYqhLTWLoWJ7d1kYsAS/xsTKodkMHgqsFP0MsL6GKx0QH6/Tnsm8XYZ9hrQmn0zCnZNrfjxyhFF junivator@Automation"
+set system login user junivator authentication ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCrX4KrY5aSH/AKHCJYVkDpP8dJss8wKKP5XOpOeGMJ8Dk3xzC6udYVM1M8XzdvJON8+ov+epGl++f7DL8f7qabnGufpo5Arvijzl/JZKd6xKhq35DLI8dOrHAVB36FsOuFIF+DuZR5XJbI9Bl39CC5WSuvBKJZMrpTdHSTv76mQTeSyw3rxh3Hz1Do4UzQUyaJ8vm/Sur36/0xRsCQf/MbIrQ+j/88opTlIWUchlqeVZXwuievaceVbbgUJDCxU3fMf6TRcuGQxlOdd5LUeb6bSUnmdsZO/NFHTUarKNAnCmgF2dX91/0rf8iqXwXhm5jxaPktL3UUo6Q0wO9EMQTP junivator@Formal-Auto"
 set system login user rescueme uid 2002
 set system login user rescueme class super-user
 set system login user rescueme authentication encrypted-password "$6$.d6QpMEs$8iz8XnMckkHL5I7vdq.7fwzOAbWJ2ve8Iqrh2d62XpFktUO248Pa2H0LPjYxXECszvXhhM3qWpLmMND6px9Pi."
@@ -50,28 +49,30 @@ set system syslog user * any emergency
 set system syslog file messages any notice
 set system syslog file messages authorization info
 set system syslog file interactive-commands interactive-commands any
-set interfaces et-0/0/0 unit 0 description to-leaf-1
+set interfaces et-0/0/0 unit 0 description "connection to poc-qfx5110-172 on interface et-0/0/2"
 set interfaces et-0/0/0 unit 0 family inet address 100.0.0.7/31
-set interfaces et-0/0/1 unit 0 description to-leaf-2
+set interfaces et-0/0/1 unit 0 description "connection to poc-qfx5110-174 on interface et-0/0/2"
 set interfaces et-0/0/1 unit 0 family inet address 100.0.0.17/31
-set interfaces et-0/0/2 unit 0 description to-leaf-3
+set interfaces et-0/0/2 unit 0 description "connection to poc-qfx5110-175 on interface et-0/0/2"
 set interfaces et-0/0/2 unit 0 family inet address 100.0.0.27/31
-set interfaces et-0/0/3 unit 0 description to-leaf-4
+set interfaces et-0/0/3 unit 0 description "connection to poc-qfx5110-188 on interface et-0/0/2"
 set interfaces et-0/0/3 unit 0 family inet address 100.0.0.37/31
-set interfaces et-0/0/4 unit 0 description to-leaf-5
+set interfaces et-0/0/4 unit 0 description "connection to poc-qfx5110-189 on interface et-0/0/2"
 set interfaces et-0/0/4 unit 0 family inet address 100.0.0.47/31
-set interfaces xe-0/0/5:0 unit 0 description to-test-equipment
-set interfaces xe-0/0/5:0 unit 0 family inet address 100.171.1.1/16
 set interfaces lo0 unit 0 family inet address 100.0.0.171/32 primary
 set routing-options router-id 100.0.0.171
 set routing-options autonomous-system 65534
 set routing-options forwarding-table export load-balancing-policy
-set protocols ospf reference-bandwidth 1000g
-set protocols ospf area 0.0.0.0 interface et-0/0/0.0
-set protocols ospf area 0.0.0.0 interface et-0/0/1.0
-set protocols ospf area 0.0.0.0 interface et-0/0/2.0
-set protocols ospf area 0.0.0.0 interface et-0/0/3.0
-set protocols ospf area 0.0.0.0 interface et-0/0/4.0
-set protocols ospf area 0.0.0.0 interface xe-0/0/5:0.0 passive
-set protocols ospf area 0.0.0.0 interface lo0.0 passive
+set protocols bgp log-updown
+set protocols bgp group underlay type external
+set protocols bgp group underlay export underlay-networks
+set protocols bgp group underlay local-as 65171
+set protocols bgp group underlay multipath multiple-as
+set protocols bgp group underlay neighbor 100.0.0.6 peer-as 65172
+set protocols bgp group underlay neighbor 100.0.0.16 peer-as 65174
+set protocols bgp group underlay neighbor 100.0.0.26 peer-as 65175
+set protocols bgp group underlay neighbor 100.0.0.36 peer-as 65188
+set protocols bgp group underlay neighbor 100.0.0.46 peer-as 65189
 set policy-options policy-statement load-balancing-policy then load-balance per-packet
+set policy-options policy-statement underlay-networks term 1 from protocol direct
+set policy-options policy-statement underlay-networks term 1 then accept

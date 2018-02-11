@@ -27,6 +27,8 @@
    - name: Retrieve facts from devices and save them locally
      junos_get_facts:
       host: "{{ inventory_hostname }}"
+      user: "{{ ADMUSER }}"
+      passwd: "{{ ADMPASS }}"
       savedir: "{{ playbook_dir }}/facts"
      register: junos
 

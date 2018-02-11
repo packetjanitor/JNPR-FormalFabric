@@ -32,6 +32,8 @@
     - name: pass the junos cli from the files cli.yml and save the output in the dir cli 
       junos_cli:
        host: "{{ inventory_hostname }}"
+       user: "{{ ADMUSER }}"
+       passwd: "{{ ADMPASS }}"
        cli: "{{ item }}"
        dest: "{{playbook_dir}}/cli/{{ inventory_hostname }}/{{ item }}.txt"
       with_items: 

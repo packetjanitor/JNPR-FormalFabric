@@ -13,7 +13,7 @@
        - "result[0]['rpc-reply']['interface-information']['physical-interface']['admin-status'] eq up"
       retries: 3
       interval: 3
-#      provider: "{{ credentials }}"
+      provider: "{{ credentials }}"
      with_items:
      - "{{ neighbors }}"
      when: item.interface is defined
@@ -27,7 +27,7 @@
        - "result[0]['rpc-reply']['interface-information']['physical-interface']['oper-status'] eq up"
       retries: 3
       interval: 3
- #     provider: "{{ credentials }}"
+      provider: "{{ credentials }}"
      with_items:
      - "{{ neighbors }}"
      when: item.interface is defined
@@ -41,7 +41,7 @@
        - "result[0]['rpc-reply']['interface-information']['physical-interface']['logical-interface']['address-family'][0]['interface-address']['ifa-local'] eq {{ item.local_ip}}/31"
       retries: 3
       interval: 3
- #     provider: "{{ credentials }}"
+      provider: "{{ credentials }}"
      with_items:
      - "{{ neighbors }}"
      when: item.interface is defined
@@ -55,6 +55,7 @@
        - "result[0]['rpc-reply']['isis-adjacency-information']['isis-adjacency']['adjacency-state'] eq 'Up'"
       retries: 3
       interval: 3
+      provider: "{{ credentials }}"
      with_items:
      - "{{ neighbors }}"
      when: item.name is defined
@@ -73,6 +74,7 @@
        - "result[0]['rpc-reply']['route-information']['route-table']['rt']['rt-entry']['protocol-name'] eq IS-IS"
       retries: 3
       interval: 3
+      provider: "{{ credentials }}"
      with_items:
      - "{{ neighbors }}"
      when: item.peer_loopback is defined
@@ -86,6 +88,7 @@
        - "result[0]['rpc-reply']['route-information']['route-table']['rt']['rt-entry']['protocol-name'] eq IS-IS"
       retries: 3
       interval: 3
+      provider: "{{ credentials }}"
      with_items:
      - "{{ neighbors }}"
      when: item.peer_loopback is defined

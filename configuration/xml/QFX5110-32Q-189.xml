@@ -1,4 +1,4 @@
-<configuration changed-seconds="1517889358" changed-localtime="2018-02-05 22:55:58 EST">
+<configuration changed-seconds="1518368754" changed-localtime="2018-02-11 12:05:54 EST">
     <version>17.4R1.16</version>
     <groups>
         <name>POC_Lab</name>
@@ -145,12 +145,12 @@
     <system>
         <login>
             <user>
-                <name>jnpradmin</name>
-                <uid>2005</uid>
+                <name>juniper05</name>
+                <uid>2007</uid>
                 <class>super-user</class>
                 <authentication>
                     <ssh-rsa>
-                        <name>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCquUbCqe2B5XbWRhzzyavno5R54AUMU41JR0zf1+Zveh1J6jc1qp6qTjttSBn1VOhJzVxZx+GnbIFcad3WV42H1WT1i5/cpRZyZYSWM7VPPrGcHO9fftXD6qED7fr82Q3p+e2cypc/6xxuH3fSSS0L59rdd4hSKivvhEz4sIXf/3ncaWVN5csdpTYiHyhNvv9Vd7a1Cr/ocFaGC/RyhJnG25+nrb9tfxleBC5pysqIPApAmKvFNrmbpZvwD0M7Vf8XBbXk7/eQ9gfxAlYzmw3ccR7OtfJ00gq6gxfnJGu90h4PeAdtk6NA9okRzx7iLdz/UHPyxjbdFo/hQsuSkY8n jnpradmin@AutoMach</name>
+                        <name>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXPghc9zk6bTUwS/hGcAP6JqEijyipwXm9PiMET8k1hzel93GOR5MOROLXFP4ff6nFMMP129VwLkD4O0/JFNWkhW27FbENYKLqCffpROxN2u7DC5fiSZMhjX//hGTJRkn2Jk/0p4YO1rEZkDA5BBqy3fMDo9UalAH5g0fBaZCON1WSdFrq90jP6B51FwJv6XwYlVVn2MiObiIrsSqzORFeEhp1NSpC9bcnizAot2XkY2paAEuC97wYom6+If2T10CMsK13rfzyt6w0LLnyQKGkn1gVDN1gAkM+EEIPg/8Pncb9BJbIxao5dakNPH5A1jY0coNyfnkW9QIyfmEWXm7B juniper05@platform</name>
                     </ssh-rsa>
                 </authentication>
             </user>
@@ -160,10 +160,7 @@
                 <class>super-user</class>
                 <authentication>
                     <ssh-rsa>
-                        <name>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+Z33/jBtEytTjGdXZXpLk95+9WneKL3HvNXAae7E3xylPZ0Q6pcPUgngDtnGF4SVXnI1YImQZNj4cVvUYMMw3QQ8hC0DAWF9n1Ov6tPN3QawkMaz4dhaVrz2qV4nQ0pytOecZmNgLy/YaYcxKHMI6jd3eKTAPt6M/qj+HlTfBdkkXmIQ09V35TtfNiVP+dgTYN3+1SudWjX/48I+QN1oaff9F6kKER8974/5JVAZUxWp+2dGH7ULX99gQACEJoysl0XHWsAQcakgnzoSOK/HQamArbuPtmV8yX7fhJsw5HwUHB2wvRvJ9Y77jVDI4H/vYEtWXEsRwwfz4t5kNYfQR junivator@automation</name>
-                    </ssh-rsa>
-                    <ssh-rsa>
-                        <name>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDL/Hi+hk25C5iXlUTI+mjHiRuCchwQEs01Ctn77y92KNStN+d0Q/d1dhavjwxE1ucfbKdmTTLUy7KV6EPoAyvgojHwX1m+/YGiApvslwrqmZow2Nju+MLYUYfrY5f1vZFLkT6XVL4Zl58OZExfQEwCf+BmUYls1JrjwUHtrN7b90Fxi02LFw7HWpPq5HMVL7CiLWUfIY/JDJbWMlq//9A7uaSAS7kw5Ou6MFQjB7sQ35PiwCu/QXNVMyA6VckTS22OsUa6I1iXywYqhLTWLoWJ7d1kYsAS/xsTKodkMHgqsFP0MsL6GKx0QH6/Tnsm8XYZ9hrQmn0zCnZNrfjxyhFF junivator@Automation</name>
+                        <name>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCrX4KrY5aSH/AKHCJYVkDpP8dJss8wKKP5XOpOeGMJ8Dk3xzC6udYVM1M8XzdvJON8+ov+epGl++f7DL8f7qabnGufpo5Arvijzl/JZKd6xKhq35DLI8dOrHAVB36FsOuFIF+DuZR5XJbI9Bl39CC5WSuvBKJZMrpTdHSTv76mQTeSyw3rxh3Hz1Do4UzQUyaJ8vm/Sur36/0xRsCQf/MbIrQ+j/88opTlIWUchlqeVZXwuievaceVbbgUJDCxU3fMf6TRcuGQxlOdd5LUeb6bSUnmdsZO/NFHTUarKNAnCmgF2dX91/0rf8iqXwXhm5jxaPktL3UUo6Q0wO9EMQTP junivator@Formal-Auto</name>
                     </ssh-rsa>
                 </authentication>
             </user>
@@ -209,7 +206,7 @@
             <name>et-0/0/0</name>
             <unit>
                 <name>0</name>
-                <description>to-spine-1</description>
+                <description>connection to poc-qfx5110-169 on interface et-0/0/4</description>
                 <family>
                     <inet>
                         <address>
@@ -223,7 +220,7 @@
             <name>et-0/0/1</name>
             <unit>
                 <name>0</name>
-                <description>to-spine-2</description>
+                <description>connection to poc-qfx5110-170 on interface et-0/0/4</description>
                 <family>
                     <inet>
                         <address>
@@ -237,80 +234,11 @@
             <name>et-0/0/2</name>
             <unit>
                 <name>0</name>
-                <description>to-spine-3</description>
+                <description>connection to poc-qfx5110-171 on interface et-0/0/4</description>
                 <family>
                     <inet>
                         <address>
                             <name>100.0.0.46/31</name>
-                        </address>
-                    </inet>
-                </family>
-            </unit>
-        </interface>
-        <interface>
-            <name>xe-0/0/3:0</name>
-            <unit>
-                <name>0</name>
-                <description>to-test-equipment</description>
-                <family>
-                    <inet>
-                        <address>
-                            <name>100.189.1.1/16</name>
-                        </address>
-                    </inet>
-                </family>
-            </unit>
-        </interface>
-        <interface>
-            <name>xe-0/0/3:1</name>
-            <unit>
-                <name>0</name>
-                <description>to-test-equipment</description>
-                <family>
-                    <ethernet-switching>
-                        <interface-mode>trunk</interface-mode>
-                        <vlan>
-                            <members>v100</members>
-                        </vlan>
-                    </ethernet-switching>
-                </family>
-            </unit>
-        </interface>
-        <interface>
-            <name>xe-0/0/3:2</name>
-            <unit>
-                <name>0</name>
-                <description>to-test-equipment</description>
-                <family>
-                    <ethernet-switching>
-                        <interface-mode>trunk</interface-mode>
-                        <vlan>
-                            <members>v200</members>
-                        </vlan>
-                    </ethernet-switching>
-                </family>
-            </unit>
-        </interface>
-        <interface>
-            <name>irb</name>
-            <unit>
-                <name>100</name>
-                <family>
-                    <inet>
-                        <address>
-                            <name>10.10.10.1/16</name>
-                            <virtual-gateway-address>10.10.10.254</virtual-gateway-address>
-                        </address>
-                    </inet>
-                </family>
-            </unit>
-            <unit>
-                <name>200</name>
-                <family>
-                    <inet>
-                        <address>
-                            <name>10.20.20.1/16</name>
-                            <virtual-gateway-address>10.20.20.254</virtual-gateway-address>
                         </address>
                     </inet>
                 </family>
@@ -329,28 +257,6 @@
                     </inet>
                 </family>
             </unit>
-            <unit>
-                <name>1</name>
-                <family>
-                    <inet>
-                        <address>
-                            <name>10.2.3.89/32</name>
-                            <primary/>
-                        </address>
-                    </inet>
-                </family>
-            </unit>
-            <unit>
-                <name>2</name>
-                <family>
-                    <inet>
-                        <address>
-                            <name>10.2.3.189/32</name>
-                            <primary/>
-                        </address>
-                    </inet>
-                </family>
-            </unit>
         </interface>
     </interfaces>
     <routing-options>
@@ -364,107 +270,33 @@
     </routing-options>
     <protocols>
         <bgp>
+            <log-updown/>
             <group>
-                <name>overlay001</name>
-                <type>internal</type>
-                <local-address>100.0.0.189</local-address>
-                <family>
-                    <evpn>
-                        <signaling>
-                        </signaling>
-                    </evpn>
-                </family>
+                <name>underlay</name>
+                <type>external</type>
+                <export>underlay-networks</export>
+                <local-as>
+                    <as-number>65189</as-number>
+                </local-as>
+                <multipath>
+                    <multiple-as/>
+                </multipath>
                 <neighbor>
-                    <name>100.0.0.172</name>
+                    <name>100.0.0.43</name>
+                    <peer-as>65169</peer-as>
                 </neighbor>
                 <neighbor>
-                    <name>100.0.0.174</name>
+                    <name>100.0.0.45</name>
+                    <peer-as>65170</peer-as>
                 </neighbor>
                 <neighbor>
-                    <name>100.0.0.175</name>
-                </neighbor>
-                <neighbor>
-                    <name>100.0.0.188</name>
+                    <name>100.0.0.47</name>
+                    <peer-as>65171</peer-as>
                 </neighbor>
             </group>
         </bgp>
-        <ospf>
-            <reference-bandwidth>1000g</reference-bandwidth>
-            <area>
-                <name>0.0.0.0</name>
-                <interface>
-                    <name>et-0/0/0.0</name>
-                </interface>
-                <interface>
-                    <name>et-0/0/1.0</name>
-                </interface>
-                <interface>
-                    <name>et-0/0/2.0</name>
-                </interface>
-                <interface>
-                    <name>xe-0/0/3:0.0</name>
-                    <passive>
-                    </passive>
-                </interface>
-                <interface>
-                    <name>lo0.0</name>
-                    <passive>
-                    </passive>
-                </interface>
-            </area>
-        </ospf>
-        <evpn>
-            <encapsulation>vxlan</encapsulation>
-            <default-gateway>no-gateway-community</default-gateway>
-            <extended-vni-list>all</extended-vni-list>
-        </evpn>
     </protocols>
     <policy-options>
-        <policy-statement>
-            <name>export-inet1</name>
-            <term>
-                <name>1</name>
-                <from>
-                    <interface>irb.100</interface>
-                </from>
-                <then>
-                    <community>
-                        <add/>
-                        <community-name>com200</community-name>
-                    </community>
-                    <accept/>
-                </then>
-            </term>
-        </policy-statement>
-        <policy-statement>
-            <name>export-inet2</name>
-            <term>
-                <name>1</name>
-                <from>
-                    <interface>irb.200</interface>
-                </from>
-                <then>
-                    <community>
-                        <add/>
-                        <community-name>com100</community-name>
-                    </community>
-                    <accept/>
-                </then>
-            </term>
-        </policy-statement>
-        <policy-statement>
-            <name>import-inet</name>
-            <term>
-                <name>1</name>
-                <from>
-                    <community>com100</community>
-                    <community>com200</community>
-                </from>
-                <then>
-                    <accept/>
-                </then>
-            </term>
-        </policy-statement>
         <policy-statement>
             <name>load-balancing-policy</name>
             <then>
@@ -473,94 +305,17 @@
                 </load-balance>
             </then>
         </policy-statement>
-        <community>
-            <name>com100</name>
-            <members>target:1:100</members>
-        </community>
-        <community>
-            <name>com200</name>
-            <members>target:1:200</members>
-        </community>
+        <policy-statement>
+            <name>underlay-networks</name>
+            <term>
+                <name>1</name>
+                <from>
+                    <protocol>direct</protocol>
+                </from>
+                <then>
+                    <accept/>
+                </then>
+            </term>
+        </policy-statement>
     </policy-options>
-    <routing-instances>
-        <instance>
-            <name>vrf_vlan100</name>
-            <instance-type>vrf</instance-type>
-            <interface>
-                <name>irb.100</name>
-            </interface>
-            <interface>
-                <name>lo0.1</name>
-            </interface>
-            <route-distinguisher>
-                <rd-type>10.2.3.11:2</rd-type>
-            </route-distinguisher>
-            <vrf-import>import-inet</vrf-import>
-            <vrf-export>export-inet1</vrf-export>
-            <routing-options>
-                <auto-export>
-                    <family>
-                        <inet>
-                            <unicast>
-                            </unicast>
-                        </inet>
-                    </family>
-                </auto-export>
-            </routing-options>
-        </instance>
-        <instance>
-            <name>vrf_vlan200</name>
-            <instance-type>vrf</instance-type>
-            <interface>
-                <name>irb.200</name>
-            </interface>
-            <interface>
-                <name>lo0.2</name>
-            </interface>
-            <route-distinguisher>
-                <rd-type>10.2.3.11:3</rd-type>
-            </route-distinguisher>
-            <vrf-import>import-inet</vrf-import>
-            <vrf-export>export-inet2</vrf-export>
-            <routing-options>
-                <auto-export>
-                    <family>
-                        <inet>
-                            <unicast>
-                            </unicast>
-                        </inet>
-                    </family>
-                </auto-export>
-            </routing-options>
-        </instance>
-    </routing-instances>
-    <switch-options>
-        <vtep-source-interface>
-            <interface-name>lo0.0</interface-name>
-        </vtep-source-interface>
-        <route-distinguisher>
-            <rd-type>100.0.0.189:1</rd-type>
-        </route-distinguisher>
-        <vrf-target>
-            <community>target:1111:11</community>
-        </vrf-target>
-    </switch-options>
-    <vlans>
-        <vlan>
-            <name>v100</name>
-            <vlan-id>100</vlan-id>
-            <l3-interface>irb.100</l3-interface>
-            <vxlan>
-                <vni>100</vni>
-            </vxlan>
-        </vlan>
-        <vlan>
-            <name>v200</name>
-            <vlan-id>200</vlan-id>
-            <l3-interface>irb.200</l3-interface>
-            <vxlan>
-                <vni>200</vni>
-            </vxlan>
-        </vlan>
-    </vlans>
 </configuration>

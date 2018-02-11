@@ -35,7 +35,7 @@
 
    - name: Push ISIS configuration on devices if ansible version is >= 2.4
      junos_config:
-#      provider: "{{ credentials }}"
+      provider: "{{ credentials }}"
       src: "{{playbook_dir}}/render/isis_render/{{ inventory_hostname }}.conf"
       update: merge
       src_format: text
@@ -48,7 +48,7 @@
    gather_facts: no
 
    tasks:
-   - pause: seconds=120
+   - pause: seconds=30
 
  - name: check op states
    hosts: junos-ssh
@@ -59,14 +59,5 @@
    roles:
    - Juniper.junos
 
-
-   tasks:
-
-   - name: Retrieve information from devices running Junos
-     junos_get_facts:
-      host: "{{ inventory_hostname }}"
-#      user: "{{ ADMUSER }}"
-#      passwd: "{{ ADMPASS }}"
-     register: junos
-
+ - include: pb.collect.facts.yml
  - include: pb.check.isis.underlay.yml

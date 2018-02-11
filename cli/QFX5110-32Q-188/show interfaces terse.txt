@@ -14,11 +14,8 @@ et-0/0/1.0              up    up   inet     100.0.0.34/31
 et-0/0/2                up    up
 et-0/0/2.0              up    up   inet     100.0.0.36/31   
 xe-0/0/3:0              up    up
-xe-0/0/3:0.0            up    up   inet     100.188.1.1/16  
 xe-0/0/3:1              up    up
-xe-0/0/3:1.0            up    up   eth-switch
 xe-0/0/3:2              up    up
-xe-0/0/3:2.0            up    up   eth-switch
 xe-0/0/3:3              up    down
 bme0                    up    up
 bme0.0                  up    up   inet     128.0.0.1/2     
@@ -36,12 +33,8 @@ esi                     up    up
 gre                     up    up
 ipip                    up    up
 irb                     up    up
-irb.100                 up    up   inet     10.10.10.1/16   
-irb.200                 up    up   inet     10.20.20.1/16   
 lo0                     up    up
 lo0.0                   up    up   inet     100.0.0.188         --> 0/0
-lo0.1                   up    up   inet     10.2.3.88           --> 0/0
-lo0.2                   up    up   inet     10.2.3.188          --> 0/0
 lo0.16385               up    up   inet    
 lsi                     up    up
 mtun                    up    up
@@ -51,8 +44,3 @@ pip0                    up    up
 tap                     up    up
 vme                     up    down
 vtep                    up    up
-vtep.32768              up    up  
-vtep.32769              up    up   eth-switch
-vtep.32770              up    up   eth-switch
-vtep.32771              up    up   eth-switch
-vtep.32772              up    up   eth-switch

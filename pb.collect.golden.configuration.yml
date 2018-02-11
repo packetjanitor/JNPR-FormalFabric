@@ -25,7 +25,7 @@
       junos_facts:
        gather_subset: config
        config_format: text
-#       provider: "{{ credentials }}"
+       provider: "{{ credentials }}"
       register: result_text
 
     - name: copy collected configuration in golden directory
