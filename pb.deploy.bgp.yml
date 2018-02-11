@@ -1,16 +1,19 @@
 ---
- - name: create render directories
+ - name: create configuration_backup directories
    hosts: localhost
    gather_facts: no
-   tags: 
-   - configuration 
    tasks:
 
    - name: create configuration directory
      file:
-       path: "{{ playbook_dir }}/{{ item }}"
+       path: "{{playbook_dir}}/render"
        state: directory
-     with_items: 
+
+   - name: create configuration subdirectories
+     file:
+       path: "{{playbook_dir}}/render/{{ item }}"
+       state: directory
+     with_items:
        - bgp_render
        - isis_render
        - ospf_render
@@ -27,12 +30,12 @@
    - name: Render BGP configuration for junos devices
      template: 
        src: "{{playbook_dir}}/templates/replacebgp.j2" 
-       dest: "{{playbook_dir}}/bgp_render/{{ inventory_hostname }}.conf"
+       dest: "{{playbook_dir}}/render/bgp_render/{{ inventory_hostname }}.conf"
 
    - name: push bgp configuration on devices if ansible version is >= 2.4
      junos_config:
 #      provider: "{{ credentials }}"
-      src: "{{playbook_dir}}/bgp_render/{{ inventory_hostname }}.conf"
+      src: "{{playbook_dir}}/render/bgp_render/{{ inventory_hostname }}.conf"
       update: merge
       src_format: text
       backup: yes

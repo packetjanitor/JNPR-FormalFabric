@@ -6,6 +6,7 @@ interfaces {
             family inet {
                 address {{ neighbor.local_ip }}/31;
             }
+            family iso;
         }
     }
 {% endfor %}
@@ -16,19 +17,20 @@ interfaces {
                     primary;
                 } 
             }
+            family iso {
+                address {{ iso_loopback }}
+            }
         }
     }
 }
 protocols {
     replace:
-    ospf {
+    isis {
         reference-bandwidth 1000g;
-        area 0.0.0.0 {
 {% for neighbor in neighbors %}
-            interface {{ neighbor.interface }}.0; 
+        interface {{ neighbor.interface }}.0;
 {% endfor %}
-            interface lo0.0 {
-                passive;
+        interface lo0.0 }
             }
         }
     }

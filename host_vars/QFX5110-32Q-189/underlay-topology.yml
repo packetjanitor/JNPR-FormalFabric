@@ -1,5 +1,6 @@
 ---
 loopback: 100.0.0.189
+iso_loopback: 49.0001.0001.0001.0189.00
 global_asn: 65534
 local_asn: 65189
 neighbors:

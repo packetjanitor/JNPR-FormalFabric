@@ -30,13 +30,13 @@
 
    - name: Render OSPF configuration for junos devices
      template: 
-       src: "{{playbook_dir}}/templates/replaceospf.j2" 
-       dest: "{{playbook_dir}}/render/ospf_render/{{ inventory_hostname }}.conf"
+       src: "{{playbook_dir}}/templates/replaceisis.j2" 
+       dest: "{{playbook_dir}}/render/isis_render/{{ inventory_hostname }}.conf"
 
    - name: Push OSPF configuration on devices if ansible version is >= 2.4
      junos_config:
 #      provider: "{{ credentials }}"
-      src: "{{playbook_dir}}/render/ospf_render/{{ inventory_hostname }}.conf"
+      src: "{{playbook_dir}}/render/isis_render/{{ inventory_hostname }}.conf"
       update: merge
       src_format: text
       backup: yes
@@ -69,4 +69,4 @@
 #      passwd: "{{ ADMPASS }}"
      register: junos
 
- - include: pb.check.ospf.underlay.yml
+ - include: pb.check.isis.underlay.yml
