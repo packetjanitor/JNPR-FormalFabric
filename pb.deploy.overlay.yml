@@ -39,14 +39,14 @@
        src: "{{playbook_dir}}/templates/overlay.j2" 
        dest: "{{playbook_dir}}/render/overlay_render/{{ inventory_hostname }}.conf"
 
-   - name: Push BGP configuration on devices if ansible version is >= 2.4
+   - name: Push Overlay configuration on devices if ansible version is >= 2.4
      junos_config:
       provider: "{{ credentials }}"
       src: "{{playbook_dir}}/render/overlay_render/{{ inventory_hostname }}.conf"
       update: merge
       src_format: text
       backup: yes
-      comment: enforce desired OSPF config from ansible
+      comment: enforce desired overlay config from ansible
      when: (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
 
  - name: Wait for operational states to converge
@@ -65,5 +65,4 @@
    roles:
    - Juniper.junos
 
- - include: pb.collect.facts.yml
  - include: pb.check.bgp.overlay.yml
