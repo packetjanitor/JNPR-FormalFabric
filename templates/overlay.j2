@@ -62,10 +62,9 @@ protocols {
             family evpn {
                 signaling;
             }
-            neighbor {{ibgp.ibgp_peer}};
-            neighbor {{ibgp.ibgp_peer}};
-            neighbor {{ibgp.ibgp_peer}};
-            neighbor {{ibgp.ibgp_peer}};
+{% for neighbor in ibgp %}
+            neighbor {{ neighbor.ibgp_peer }};
+{% endfor %}
         }
     }
     evpn {

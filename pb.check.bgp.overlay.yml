@@ -14,7 +14,7 @@
      junos_command:
       display: 'xml'
       commands:
-       - show bgp neighbor "{{ ibgp.ibgp_peer }}"
+       - show bgp neighbor "{{ item.ibgp_peer }}"
       waitfor:
        - "result[0]['rpc-reply']['bgp-information']['bgp-peer']['peer-state'] eq 'Established'"
       retries: 3
@@ -22,14 +22,12 @@
       provider: "{{ credentials }}"
      with_items:
      - "{{ ibgp }}"
-     when: ibgp.ibgp_peer is defined
-
 
    - name: Verify that the Junos devices learned routes in the OVERLAY network.
      junos_command:
       display: 'xml'
       commands:
-       - show route receive-protocol bgp "{{ ibgp.ibgp_peer }}" table bgp.evpn.0"
+       - show route receive-protocol bgp "{{ item.ibgp_peer }}" table bgp.evpn.0"
       waitfor:
        - "result[0]['rpc-reply']['route-information']['route-table']['total-route-count'] gt 5"
       retries: 3
@@ -37,4 +35,29 @@
       provider: "{{ credentials }}"
      with_items:
      - "{{ ibgp }}"
-     when: ibgp.ibgp_peer is defined
+
+   - name: Verify that VLAN 100 has been extended across the Junos devices OVERLAY network.
+     junos_command:
+      display: 'xml'
+      commands:
+       - show evpn database neighbor "{{ item.ibgp_peer }}" state default-gateway l2-domain-id 100"
+      waitfor:
+       - "result[0]['rpc-reply']['evpn-database-information']['evpn-database-instance']['mac-entry'][ip-address] eq '10.10.10.254'"
+      retries: 3
+      interval: 3
+      provider: "{{ credentials }}"
+     with_items:
+     - "{{ ibgp }}"
+
+   - name: Verify that VLAN 200 has been extended across the Junos devices OVERLAY network.
+     junos_command:
+      display: 'xml'
+      commands:
+       - show evpn database neighbor "{{ item.ibgp_peer }}" state default-gateway l2-domain-id 200"
+      waitfor:
+       - "result[0]['rpc-reply']['evpn-database-information']['evpn-database-instance']['mac-entry'][ip-address] eq '10.20.20.254'"
+      retries: 3
+      interval: 3
+      provider: "{{ credentials }}"
+     with_items:
+     - "{{ ibgp }}"
