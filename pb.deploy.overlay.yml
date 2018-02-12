@@ -1,0 +1,69 @@
+# Copyright 2018, Juniper Networks Pvt Ltd.
+# All rights reserved.
+# This will create an iBGP overlay configuration on the Leaf nodes in the fabric, deploy, and test it.
+# command example: ansible-playbook --ask-vault-pass pb.deploy.overlay.yml
+# Successfully ran on ansible version: ansible 2.4.2.0: ansible-galaxy list Juniper.junos,1.4.3
+---
+ - name: create configuration_backup directories
+   hosts: localhost
+   gather_facts: no
+   tasks:
+
+   - name: create configuration directory
+     file:
+       path: "{{playbook_dir}}/render"
+       state: directory
+
+
+   - name: create configuration subdirectories
+     file:
+       path: "{{playbook_dir}}/render/{{ item }}"
+       state: directory
+     with_items:
+       - bgp_render
+       - isis_render
+       - ospf_render
+       - overlay_render
+
+ - name: configure devices
+   hosts: junos-leaf
+   connection: local
+   gather_facts: no
+   tags: 
+   -  configuration
+   
+   tasks:
+
+   - name: Render Overlay configuration for junos devices
+     template: 
+       src: "{{playbook_dir}}/templates/overlay.j2" 
+       dest: "{{playbook_dir}}/render/overlay_render/{{ inventory_hostname }}.conf"
+
+   - name: Push BGP configuration on devices if ansible version is >= 2.4
+     junos_config:
+      provider: "{{ credentials }}"
+      src: "{{playbook_dir}}/render/overlay_render/{{ inventory_hostname }}.conf"
+      update: merge
+      src_format: text
+      backup: yes
+      comment: enforce desired OSPF config from ansible
+     when: (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
+
+ - name: Wait for operational states to converge
+   hosts: localhost
+   gather_facts: no
+
+   tasks:
+   - pause: seconds=30
+
+ - name: check op states
+   hosts: junos-leaf
+   connection: local
+   gather_facts: no
+   tags: 
+   - audit
+   roles:
+   - Juniper.junos
+
+ - include: pb.collect.facts.yml
+ - include: pb.check.bgp.overlay.yml

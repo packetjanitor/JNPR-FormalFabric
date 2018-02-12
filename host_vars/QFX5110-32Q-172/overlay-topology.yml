@@ -1,6 +1,8 @@
---- 
-bgp_neighbors:
-   - neighbor: 100.0.0.174
-   - neighbor: 100.0.0.175
-   - neighbor: 100.0.0.188
-   - neighbor: 100.0.0.189
+---
+ov_neighbors:
+   - ov_loopback_01: 10.2.3.72
+   - ov_loopback_02: 10.2.3.172  
+   - ibgp_peer_01: 100.0.0.174
+   - ibgp_peer_02: 100.0.0.175
+   - ibgp_peer_03: 100.0.0.188
+   - ibgp_peer_04: 100.0.0.189
