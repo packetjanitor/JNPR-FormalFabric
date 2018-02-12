@@ -5,13 +5,16 @@ interfaces {
             description "connection to {{ neighbor.name }} on interface {{neighbor.peer_interface}}";
             family inet {
                 address {{ neighbor.local_ip }}/31;
+            }
+        }
+    }
 {% endfor %}
 {% for neighbor in directly_connected %}
     {{ neighbor.dc_interface }} {
         unit 0 {
             description "connection {{ neighbor.dc_name }}";
             family inet {
-                address {{ neighbor.dc_local_ip }}/{{dc_local_ip_mask}};
+                address {{ neighbor.dc_local_ip }}/{{neighbor.dc_local_ip_mask}};
 {% endfor %}
             }
         }
@@ -39,6 +42,11 @@ protocols {
                 passive;
             }
         }
+    }
+    lldp {
+{% for neighbor in neighbors %}
+        interface {{ neighbor.interface }};
+{% endfor %}
     }
 }
 replace:

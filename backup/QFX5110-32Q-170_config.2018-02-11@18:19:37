@@ -34,11 +34,10 @@ set groups POC_Lab chassis fpc 0 pic 0 port 5 channel-speed 10g
 set groups POC_Lab interfaces em0 unit 0 family inet address 172.25.45.170/24
 set groups POC_Lab snmp community public
 set groups POC_Lab routing-options static route 0.0.0.0/0 next-hop 172.25.45.1
-set groups POC_Lab protocols lldp interface all
 set apply-groups POC_Lab
 set system login user juniper05 uid 2007
 set system login user juniper05 class super-user
-set system login user juniper05 authentication ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXPghc9zk6bTUwS/hGcAP6JqEijyipwXm9PiMET8k1hzel93GOR5MOROLXFP4ff6nFMMP129VwLkD4O0/JFNWkhW27FbENYKLqCffpROxN2u7DC5fiSZMhjX//hGTJRkn2Jk/0p4YO1rEZkDA5BBqy3fMDo9UalAH5g0fBaZCON1WSdFrq90jP6B51FwJv6XwYlVVn2MiObiIrsSqzORFeEhp1NSpC9bcnizAot2XkY2paAEuC97wYom6+If2T10CMsK13rfzyt6w0LLnyQKGkn1gVDN1gAkM+EEIPg/8Pncb9BJbIxao5dakNPH5A1jY0coNyfnkW9QIyfmEWXm7B juniper05@platform"
+set system login user juniper05 authentication ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgY/wPEXsHBttavgbte9wPvITXrNwuXFOrfjGpeBgCgbD+f6yALram4I1BvSp8aRwOzqTzoVkzytV6/Y1SiZvQEh2jPLxnSEv5lkdt0pTHO43i/h54tif+UuOpQcXNcunLDpbLWxTo7iXL0leAukeaMYqGvhdW7Pf0jmWDMmk3Hy/BxZGWca0VIGvdBVZUOynfbv1GeaSEWbj1iygpudzVqKP06OX/H53j25Ftq7MPD4GryPsxJ3AsdVtUn2Yde6wZ4d8SJ6FNnqSPjy9zn1kx+qbozcZATrjK7vsR/YplEnXLNABsAmCsBptcVrHp9H1tkXrjLZ6rKfmzdM4eBLwZ juniper05@platform"
 set system login user junivator uid 2006
 set system login user junivator class super-user
 set system login user junivator authentication ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCrX4KrY5aSH/AKHCJYVkDpP8dJss8wKKP5XOpOeGMJ8Dk3xzC6udYVM1M8XzdvJON8+ov+epGl++f7DL8f7qabnGufpo5Arvijzl/JZKd6xKhq35DLI8dOrHAVB36FsOuFIF+DuZR5XJbI9Bl39CC5WSuvBKJZMrpTdHSTv76mQTeSyw3rxh3Hz1Do4UzQUyaJ8vm/Sur36/0xRsCQf/MbIrQ+j/88opTlIWUchlqeVZXwuievaceVbbgUJDCxU3fMf6TRcuGQxlOdd5LUeb6bSUnmdsZO/NFHTUarKNAnCmgF2dX91/0rf8iqXwXhm5jxaPktL3UUo6Q0wO9EMQTP junivator@Formal-Auto"
@@ -49,35 +48,3 @@ set system syslog user * any emergency
 set system syslog file messages any notice
 set system syslog file messages authorization info
 set system syslog file interactive-commands interactive-commands any
-set interfaces et-0/0/0 unit 0 description to-leaf-1
-set interfaces et-0/0/0 unit 0 family inet address 100.0.0.5/31
-set interfaces et-0/0/1 unit 0 description to-leaf-2
-set interfaces et-0/0/1 unit 0 family inet address 100.0.0.15/31
-set interfaces et-0/0/2 unit 0 description to-leaf-3
-set interfaces et-0/0/2 unit 0 family inet address 100.0.0.25/31
-set interfaces et-0/0/3 unit 0 description to-leaf-4
-set interfaces et-0/0/3 unit 0 family inet address 100.0.0.35/31
-set interfaces et-0/0/4 unit 0 description to-leaf-5
-set interfaces et-0/0/4 unit 0 family inet address 100.0.0.45/31
-set interfaces xe-0/0/5:0 unit 0 description to-test-equipment
-set interfaces xe-0/0/5:0 unit 0 family inet address 100.170.1.1/16
-set interfaces lo0 unit 0 family inet address 100.0.0.170/32 primary
-set routing-options router-id 100.0.0.170
-set routing-options autonomous-system 65534
-set routing-options forwarding-table export load-balancing-policy
-set protocols bgp group underlay export underlay-networks
-set protocols bgp group underlay local-as 65170
-set protocols bgp group underlay multipath multiple-as
-set protocols bgp group underlay neighbor 100.0.0.4 description to-leaf-1
-set protocols bgp group underlay neighbor 100.0.0.4 peer-as 65172
-set protocols bgp group underlay neighbor 100.0.0.14 description to-leaf-2
-set protocols bgp group underlay neighbor 100.0.0.14 peer-as 65174
-set protocols bgp group underlay neighbor 100.0.0.24 description to-leaf-3
-set protocols bgp group underlay neighbor 100.0.0.24 peer-as 65175
-set protocols bgp group underlay neighbor 100.0.0.34 description to-leaf-4
-set protocols bgp group underlay neighbor 100.0.0.34 peer-as 65188
-set protocols bgp group underlay neighbor 100.0.0.44 description to-leaf-5
-set protocols bgp group underlay neighbor 100.0.0.44 peer-as 65189
-set policy-options policy-statement load-balancing-policy then load-balance per-packet
-set policy-options policy-statement underlay-networks term 1 from protocol direct
-set policy-options policy-statement underlay-networks term 1 then accept

@@ -9,6 +9,16 @@ interfaces {
         }
     }
 {% endfor %}
+{% for neighbor in directly_connected %}
+    {{ neighbor.dc_interface }} {
+        unit 0 {
+            description "connection {{ neighbor.dc_name }}";
+            family inet {
+                address {{ neighbor.dc_local_ip }}/{{neighbor.dc_local_ip_mask}};
+            }
+        }
+    }
+{% endfor %}
     lo0 {
         unit 0 {
             family inet {
@@ -34,6 +44,11 @@ protocols {
             }
 {% endfor %}
         }
+    }
+    lldp {
+{% for neighbor in neighbors %}
+        interface {{ neighbor.interface }};
+{% endfor %}
     }
 }
 replace:

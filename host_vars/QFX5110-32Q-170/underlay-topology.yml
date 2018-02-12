@@ -39,3 +39,8 @@ neighbors:
      peer_ip: 100.0.0.44
      local_ip: 100.0.0.45
      peer_loopback: 100.0.0.189
+directly_connected:
+   - dc_interface: xe-0/0/5:0
+     dc_name: To_Test_Equipment
+     dc_local_ip: 100.170.1.1
+     dc_local_ip_mask: 16
