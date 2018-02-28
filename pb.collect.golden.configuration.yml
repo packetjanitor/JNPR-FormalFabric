@@ -1,7 +1,7 @@
 # Copyright 2018, Juniper Networks Pvt Ltd.
 # All rights reserved.
 # This captures golden/known-good configurations.
-# command example: ansible-playbook --ask-vault-pass pb.collect.golden.configuration.yml --extra-vars "lab=base/ospf/isis/bgp/mh-ospf"
+# command example: ansible-playbook --ask-vault-pass pb.collect.golden.configuration.yml --extra-vars "lab=base/ospf/isis/bgp/mh_ospf/mh_isis/mh_bgp"
 # Successfully ran on ansible version: ansible 2.4.2.0: ansible-galaxy list Juniper.junos,1.4.3
 ---
  - name: create golden directory
@@ -20,6 +20,8 @@
       - golden_configuration/isis_underlay_evpn_vxlan_overlay 
       - golden_configuration/bgp_underlay_evpn_vxlan_overlay 
       - golden_configuration/mh_ospf_underlay_evpn_vxlan_overlay
+      - golden_configuration/mh_isis_underlay_evpn_vxlan_overlay
+      - golden_configuration/mh_bgp_underlay_evpn_vxlan_overlay
 
  - name: set and collect junos golden configuration
    hosts: junos-ssh

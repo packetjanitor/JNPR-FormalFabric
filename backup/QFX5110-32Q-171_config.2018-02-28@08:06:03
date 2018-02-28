@@ -32,9 +32,6 @@ set groups POC_Lab system ntp server 172.25.124.17 prefer
 set groups POC_Lab system ntp server 66.129.255.62 prefer
 set groups POC_Lab chassis fpc 0 pic 0 port 5 channel-speed 10g
 set groups POC_Lab interfaces em0 unit 0 family inet address 172.25.45.171/24
-set groups POC_Lab interfaces et-0/0/0 disable
-set groups POC_Lab interfaces et-0/0/1 disable
-set groups POC_Lab interfaces et-0/0/2 disable
 set groups POC_Lab snmp community public
 set groups POC_Lab routing-options static route 0.0.0.0/0 next-hop 172.25.45.1
 set apply-groups POC_Lab
@@ -54,35 +51,3 @@ set system syslog user * any emergency
 set system syslog file messages any notice
 set system syslog file messages authorization info
 set system syslog file interactive-commands interactive-commands any
-set interfaces et-0/0/0 unit 0 description "connection to poc-qfx5110-172 on interface et-0/0/2"
-set interfaces et-0/0/0 unit 0 family inet address 100.0.0.7/31
-set interfaces et-0/0/1 unit 0 description "connection to poc-qfx5110-174 on interface et-0/0/2"
-set interfaces et-0/0/1 unit 0 family inet address 100.0.0.17/31
-set interfaces et-0/0/2 unit 0 description "connection to poc-qfx5110-175 on interface et-0/0/2"
-set interfaces et-0/0/2 unit 0 family inet address 100.0.0.27/31
-set interfaces et-0/0/3 unit 0 description "connection to poc-qfx5110-188 on interface et-0/0/2"
-set interfaces et-0/0/3 unit 0 family inet address 100.0.0.37/31
-set interfaces et-0/0/4 unit 0 description "connection to poc-qfx5110-189 on interface et-0/0/2"
-set interfaces et-0/0/4 unit 0 family inet address 100.0.0.47/31
-set interfaces xe-0/0/5:0 unit 0 description "connection To_Test_Equipment"
-set interfaces xe-0/0/5:0 unit 0 family inet address 100.171.1.1/16
-set interfaces lo0 unit 0 family inet address 100.0.0.171/32 primary
-set routing-options router-id 100.0.0.171
-set routing-options autonomous-system 65534
-set routing-options forwarding-table export load-balancing-policy
-set protocols ospf export underlay-networks
-set protocols ospf reference-bandwidth 1000g
-set protocols ospf area 0.0.0.0 interface et-0/0/0.0
-set protocols ospf area 0.0.0.0 interface et-0/0/1.0
-set protocols ospf area 0.0.0.0 interface et-0/0/2.0
-set protocols ospf area 0.0.0.0 interface et-0/0/3.0
-set protocols ospf area 0.0.0.0 interface et-0/0/4.0
-set protocols ospf area 0.0.0.0 interface lo0.0 passive
-set protocols lldp interface et-0/0/0
-set protocols lldp interface et-0/0/1
-set protocols lldp interface et-0/0/2
-set protocols lldp interface et-0/0/3
-set protocols lldp interface et-0/0/4
-set policy-options policy-statement load-balancing-policy then load-balance per-packet
-set policy-options policy-statement underlay-networks term 1 from protocol direct
-set policy-options policy-statement underlay-networks term 1 then accept
