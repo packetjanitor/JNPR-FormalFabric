@@ -17,9 +17,23 @@ install:
   - ansible-galaxy --force install Juniper.junos,1.4.3 -p ./
 
 script:
-  - ansible-playbook pb.check.bgp.overlay.yml --syntax-check
-  - ansible-playbook pb.check.ospf.underlay.yml --syntax-check
   - ansible-playbook pb.check.reachability.yml --syntax-check
+  - ansible-playbook pb.collect.cli.output.yml --syntax-check
+  - ansible-playbook pb.collect.configuration.yml --syntax-check
+  - ansible-playbook pb.collect.facts.yml --syntax-check
+  - ansible-playbook pb.collect.golden.configuration.yml --syntax-check
+  - ansible-playbook pb.configure.golden.yml --syntax-check
+  - ansible-playbook pb.deploy.bgp.yml --syntax-check
+  - ansible-playbook pb.deploy.isis.yml --syntax-check
+  - ansible-playbook pb.deploy.ospf.yml --syntax-check
+  - ansible-playbook pb.deploy.overlay.yml --syntax-check
+  - ansible-playbook pb.rollback.yml --syntax-check
+  - ansible-playbook pb.check.all.yml --syntax-check
+  - ansible-playbook pb.check.bgp.overlay.yml --syntax-check
+  - ansible-playbook pb.check.bgp.underlay.yml --syntax-check
+  - ansible-playbook pb.check.isis.underlay.yml --syntax-check
+  - ansible-playbook pb.check.lldp.yml --syntax-check
+  - ansible-playbook pb.check.ospf.underlay.yml --syntax-check
 
 branches:
   only:
