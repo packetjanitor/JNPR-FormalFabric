@@ -1,6 +1,6 @@
-# Gratitude and Notice of Theft
+# Gratitude
 
-I am basically taking Khelil's stuff and using GitHub to organize it into my lab environment and learning a ton of new stuff.
+I am basically taking Khelil's stuff, modifying it, and then using GitHub to organize it into my lab environment (while backing up and storing my files) and learning a ton of new stuff.
 
 https://github.com/ksator/junos-automation-with-ansible <--- His stuff is located here.
 
