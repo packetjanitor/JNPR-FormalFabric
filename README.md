@@ -89,6 +89,6 @@ In order to see all variables for a hostname, you can run this command:
 ansible -m debug -a "var=hostvars['hostname']" localhost
 
 # Travis CI Status
-https://travis-ci.org/packetjanitor/JNPR-FormalFabric.svg?branch=master
+[![Build Status](https://travis-ci.org/packetjanitor/JNPR-FormalFabric.svg?branch=master)](https://travis-ci.org/packetjanitor/JNPR-FormalFabric)
 
 More to come... Stay Tuned
