@@ -14,14 +14,14 @@ Build a basic Ubuntu 16.04 Server and don't update it. Follow the instructions b
 
 ## Get the content of the remote repository locally
 
-sudo -s
-git clone https://github.com/packetjanitor/JNPR-FormalFabric.git
-ls JNPR-FormalFabric
+sudo -s <br />
+git clone https://github.com/packetjanitor/JNPR-FormalFabric.git <br />
+ls JNPR-FormalFabric <br />
 
 ## Move to the local copy of the remote repo
 
-cd JNPR-FormalFabric
-sudo -s
+cd JNPR-FormalFabric <br />
+sudo -s <br />
 
 ## Install PyEZ, Jxmlease, Ansible, JSNAPy and all their dependencies
 
@@ -29,43 +29,40 @@ This repository has been tested using Ansible 2.4.2.0
 
 ## Run these commands on Ubuntu 16.04 to install these tools:
 
-sudo -s
-apt-get update
-apt-get upgrade
-apt-get install -y python-dev libxml2-dev python-pip libxslt1-dev build-essential libssl-dev libffi-dev git
-pip install junos-eznc jxmlease wget jsnapy ansible==2.4.2.0 requests ipaddress cryptography 
-ansible-galaxy install Juniper.junos,1.4.3
+sudo -s <br />
+apt-get update <br />
+apt-get upgrade <br />
+apt-get install -y python-dev libxml2-dev python-pip libxslt1-dev build-essential libssl-dev libffi-dev git <br />
+pip install junos-eznc jxmlease wget jsnapy ansible==2.4.2.0 requests ipaddress cryptography <br />
+ansible-galaxy install Juniper.junos,1.4.3 <br />
 
-Check the Ansible version:
+Check the Ansible version: <br />
+ansible --version <br />
 
-ansible --version
-
-Verify you have the Juniper.junos role:
-
-ls /etc/ansible/roles/
+Verify you have the Juniper.junos role: <br />
+ls /etc/ansible/roles/ <br />
 
 This repository has been tested using the version 1.4.3 of the Juniper.junos role available on Galaxy.
 Use this command to see the name and version of each role installed:
 
-ansible-galaxy list
+ansible-galaxy list <br />
 
 ## Permission problems
 
 I know running everything with sudo -s will put alot of it in root's control and thus a hassle to execute as a normal user. Here's how to solve that...
 
-ls -al
-
-chown <username>:<username> NameOfDirectory or FileName
+ls -al <br />
+```
+chown <username>:<username> NameOfDirectory or FileName <br />
+```
 
 ## Configure NETCONF on the Junos devices
 
-set system services netconf ssh
-commit
+set system services netconf ssh <br />
+commit <br />
 
 # Repository structure
 ## Inventory file:
-
-The default hosts file lives in /etc/ansible/hosts.
 
 The inventory file we are using in this repository is hosts.
 
