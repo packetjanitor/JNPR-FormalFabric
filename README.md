@@ -15,12 +15,14 @@ Build a basic Ubuntu 16.04 Server and don't update it. Follow the instructions b
 ## Get the content of the remote repository locally
 
 sudo -s
+
 git clone https://github.com/packetjanitor/JNPR-FormalFabric.git
+
 ls JNPR-FormalFabric
 
 ## Move to the local copy of the remote repo
 
-cd JNPR-FormalFabric
+cd JNPR-FormalFabric \n
 sudo -s
 
 ## Install PyEZ, Jxmlease, Ansible, JSNAPy and all their dependencies
