@@ -35,12 +35,12 @@
    - name: Render BGP configuration for junos devices
      template: 
        src: "{{playbook_dir}}/templates/replacebgp.j2" 
-       dest: "{{playbook_dir}}/render/bgp_render/{{ inventory_hostname }}.conf"
+       dest: "{{playbook_dir}}/render/bgp_render/{{ junos_host }}.conf"
 
    - name: push bgp configuration on devices if ansible version is >= 2.4
      junos_config:
       provider: "{{ credentials }}"
-      src: "{{playbook_dir}}/render/bgp_render/{{ inventory_hostname }}.conf"
+      src: "{{playbook_dir}}/render/bgp_render/{{ junos_host }}.conf"
       update: merge
       src_format: text
       backup: yes

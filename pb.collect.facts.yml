@@ -26,12 +26,12 @@
    
    - name: remove old facts from facts directory
      file: 
-       path: "{{playbook_dir}}/inventory/{{inventory_hostname}}.conf" 
+       path: "{{playbook_dir}}/inventory/{{junos_host}}.conf" 
        state: absent
      
    - name: Retrieve facts from devices and save them locally
      junos_get_facts:
-      host: "{{ inventory_hostname }}"
+      host: "{{ junos_host }}"
       user: "{{ ADMUSER }}"
       passwd: "{{ ADMPASS }}"
       savedir: "{{ playbook_dir }}/facts"

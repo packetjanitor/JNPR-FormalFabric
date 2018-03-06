@@ -37,12 +37,12 @@
    - name: Render Overlay configuration for junos devices
      template: 
        src: "{{playbook_dir}}/templates/overlay.j2" 
-       dest: "{{playbook_dir}}/render/overlay_render/{{ inventory_hostname }}.conf"
+       dest: "{{playbook_dir}}/render/overlay_render/{{ junos_host }}.conf"
 
    - name: Push Overlay configuration on devices if ansible version is >= 2.4
      junos_config:
       provider: "{{ credentials }}"
-      src: "{{playbook_dir}}/render/overlay_render/{{ inventory_hostname }}.conf"
+      src: "{{playbook_dir}}/render/overlay_render/{{ junos_host }}.conf"
       update: merge
       src_format: text
       backup: yes

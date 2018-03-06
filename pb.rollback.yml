@@ -34,10 +34,10 @@
 
    - name: Rollback junos config task
      junos_rollback:
-      host: "{{ inventory_hostname }}"
+      host: "{{ junos_host }}"
       user: "{{ ADMUSER }}"
       passwd: "{{ ADMPASS }}"
       logfile: "{{playbook_dir}}/rollback/log/rollback.log"
-      diffs_file: "{{playbook_dir}}/rollback/diff/{{ inventory_hostname }}.diff"
+      diffs_file: "{{playbook_dir}}/rollback/diff/{{ junos_host }}.diff"
       rollback: "{{ rbid }}" 
       comment: "configuration rolled back by Ansible using rollback id {{ rbid }}"
