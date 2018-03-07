@@ -32,9 +32,6 @@ set groups POC_Lab system ntp server 172.25.124.17 prefer
 set groups POC_Lab system ntp server 66.129.255.62 prefer
 set groups POC_Lab chassis fpc 0 pic 0 port 5 channel-speed 10g
 set groups POC_Lab interfaces em0 unit 0 family inet address 172.25.45.171/24
-set groups POC_Lab interfaces et-0/0/0 disable
-set groups POC_Lab interfaces et-0/0/1 disable
-set groups POC_Lab interfaces et-0/0/2 disable
 set groups POC_Lab snmp community public
 set groups POC_Lab routing-options static route 0.0.0.0/0 next-hop 172.25.45.1
 set groups POC_Lab protocols lldp interface all
