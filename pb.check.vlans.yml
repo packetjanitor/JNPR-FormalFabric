@@ -1,0 +1,28 @@
+---
+- name: check from devices operationnal state if desirated vlans are presents
+  hosts: DC1
+  connection: local
+  gather_facts: no  
+  tasks:
+  - name: check vlans
+    junos_command:
+      provider: "{{ credentials }}"
+      display: 'xml'
+      commands:
+       - show vlans "{{ item.vlan_name }}" detail
+      waitfor:
+       - "result[0][‘rpc-reply’][‘l2ng-l2ald-vlan-instance-information’][‘l2ng-l2ald-vlan-instance-group’]['l2ng-l2rtb-vlan-tag’] eq {{ item.vlan_id }}"
+      retries: 3
+      interval: 3
+    with_items: 
+    - "{{ vlanlist }}"
+
+#  - name: Send Slack notification
+#    local_action:
+#      module: slack
+#      icon_url: "https://www.ansible.com/hs-fs/hub/330046/file-448313641-png/favicon.png"
+#      token: T2MBN64JX/B7HR6LQMS/b3PLhcxoDg1RwXZq0N0QSpgg
+#      username: "Ansible on {{ inventory_hostname }}"
+#      channel: code
+#      msg: "audit completed successfully using pb.Check.vlans.yml"
+#      validate_certs: false
