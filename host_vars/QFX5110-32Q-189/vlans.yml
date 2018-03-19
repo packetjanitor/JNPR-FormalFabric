@@ -1,8 +1,8 @@
 ---
 vlanlist:
    - vlan_id: 100
-     name: "v100"
-     vlan_vni: "100"
+     name: v100
+     vlan_vni: 100
    - vlan_id: 200
-     name: "v200"
-     vlan_vni: "200" 
+     name: v200
+     vlan_vni: 200 
