@@ -1,0 +1,65 @@
+# Copyright 2018, Juniper Networks Pvt Ltd.
+# All rights reserved.
+# This creates a BGP Spine/Leaf configuration, deploys it, and tests for availability.
+# command example: ansible-playbook --ask-vault-pass <filename> —extra-vars “lab=base/ospf/isis/bgp”
+# Successfully ran on ansible version: ansible 2.4.2.0: ansible-galaxy list Juniper.junos,1.4.3
+---
+ - name: create configuration_backup directories
+   hosts: localhost
+   gather_facts: no
+   tasks:
+
+   - name: create configuration directory
+     file:
+       path: "{{playbook_dir}}/render"
+       state: directory
+
+   - name: create configuration subdirectories
+     file:
+       path: "{{playbook_dir}}/render/{{ item }}"
+       state: directory
+     with_items:
+       - maintenance_render
+
+ - name: configure devices
+   hosts: junos-spine
+   connection: local
+   gather_facts: no
+   tags: 
+   -  configuration
+   
+   tasks:
+
+   - name: Render BGP configuration for junos devices
+     template: 
+       src: "{{playbook_dir}}/templates/replacepolicy.j2" 
+       dest: "{{playbook_dir}}/render/maintenance_render/{{ junos_host }}.conf"
+
+   - name: push bgp configuration on devices if ansible version is >= 2.4
+     junos_config:
+      provider: "{{ credentials }}"
+      src: "{{playbook_dir}}/render/maintenance_render/{{ junos_host }}.conf"
+      update: merge
+      src_format: text
+      backup: yes
+      comment: enforce desired bgp config from ansible
+     when: (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
+
+ - name: wait for op states to converge
+   hosts: localhost
+   gather_facts: no
+
+   tasks:
+   - pause: seconds=30
+
+ - name: check op states
+   hosts: junos-ssh
+   connection: local
+   gather_facts: no
+   tags: 
+   - audit
+   roles:
+   - Juniper.junos
+
+ - include: pb.collect.facts.yml
+ - include: pb.check.bgp.underlay.yml
