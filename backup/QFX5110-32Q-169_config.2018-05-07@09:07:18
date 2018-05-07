@@ -84,4 +84,3 @@ set protocols lldp interface et-0/0/4
 set policy-options policy-statement load-balancing-policy then load-balance per-packet
 set policy-options policy-statement underlay-networks term 1 from protocol direct
 set policy-options policy-statement underlay-networks term 1 then accept
-set policy-options policy-statement underlay-networks term 2 then as-path-prepend "65169 65169"

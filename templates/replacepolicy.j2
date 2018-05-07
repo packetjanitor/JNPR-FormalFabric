@@ -9,8 +9,9 @@ policy-options {
         term 1 {
             from protocol direct;
             then accept;
+        }
         term 2 {
-            then as-path-prepend "{{ local_asn }} {{ local_asn }}"
+            then as-path-prepend "{{ local_asn }} {{ local_asn }}";
         }
     }
 }

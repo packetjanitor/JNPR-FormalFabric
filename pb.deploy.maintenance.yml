@@ -22,7 +22,7 @@
        - maintenance_render
 
  - name: configure devices
-   hosts: junos-spine
+   hosts: "{{ spine }}"
    connection: local
    gather_facts: no
    tags: 
