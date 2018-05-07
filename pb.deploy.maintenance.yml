@@ -1,7 +1,7 @@
 # Copyright 2018, Juniper Networks Pvt Ltd.
 # All rights reserved.
 # This creates a BGP Spine/Leaf configuration, deploys it, and tests for availability.
-# command example: ansible-playbook --ask-vault-pass <filename> —extra-vars “lab=base/ospf/isis/bgp”
+# command example: ansible-playbook pb.deploy.maintenance.yml --extra-vars "spine=QFX5110-32Q-169"
 # Successfully ran on ansible version: ansible 2.4.2.0: ansible-galaxy list Juniper.junos,1.4.3
 ---
  - name: create configuration_backup directories
